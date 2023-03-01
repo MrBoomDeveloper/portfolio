@@ -1,0 +1,17 @@
+.content {
+	padding: 1.5rem;
+	display: flex;
+	background-color: red;
+	
+	.logo {
+		color: blue;
+		text-decoration: none;
+		flex-grow: 1;
+	}
+
+	.burger {
+		background-color: blue;
+		width: 2em;
+		height: 2em;
+	}
+}
