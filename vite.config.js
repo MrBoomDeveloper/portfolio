@@ -9,12 +9,12 @@ export default defineConfig({
 	resolve: {
 		extensions: [".jsx", ".js", ".json", ".module.scss", ".scss"],
 		alias: {
-			"@components": "./components/",
-			"@data": "./data/",
-			"@utils": "./utils/",
-			"@pages": "./pages/",
-			"@assets": "./assets/",
-			"@etc": "./etc/"
+			"@components": "./components",
+			"@data": "./data",
+			"@utils": "./utils",
+			"@pages": "./pages",
+			"@assets": "./assets",
+			"@etc": "./etc"
 		}
 	},
 	
