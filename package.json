@@ -7,8 +7,7 @@
 		"start": "npm run dev",
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview",
-		"pages": "npm run build && git add dist -f && git commit -m 'Update dist' && git subtree push --prefix dist origin gh-pages"
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
