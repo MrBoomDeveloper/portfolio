@@ -1,12 +1,12 @@
 .content {
 	padding: 1.5rem;
 	display: flex;
+	justify-content: space-between;
 	background-color: red;
 	
 	.logo {
 		color: blue;
 		text-decoration: none;
-		flex-grow: 1;
 	}
 
 	.burger {

@@ -1,11 +1,11 @@
-import styles from "./styles.module.scss";
-import { Header } from "@components/layouts"
-import tabs from "@data/headerTabs";
+import { Hero, Skills } from "./sections";
+import styles from "./styles.module";
 
-export default Home() {
+export default function Home() {
 	return (
 		<div className={styles.screen}>
-			<Header />
+			<Hero />
+			<Skills />
 		</div>
 	);
 }

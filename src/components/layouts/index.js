@@ -1,3 +1,5 @@
-export { * } from "./Header";
-export * from "./Footer";
-export * from "./Navigation";
+import Header from "./Header";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
+
+export { Header, Navigation, Footer };
