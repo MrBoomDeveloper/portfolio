@@ -1,27 +1,30 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { resolve as resolvePath } from "path";
+
+const root = resolvePath(__dirname, "src");
 
 export default defineConfig({
 	root: "./src",
-	base: "https://me.mrboomdev.ru",
+	base: "https://mrboomdev.ru/portfolio",
 	publicDir: "./assets",
 	
 	resolve: {
 		extensions: [".jsx", ".js", ".json", ".module.scss", ".scss"],
 		alias: {
-			"@components": "./components",
-			"@data": "./data",
-			"@utils": "./utils",
-			"@pages": "./pages",
-			"@assets": "./assets",
-			"@etc": "./etc"
+			"@components": resolvePath(root, "components"),
+			"@data": resolvePath(root, "data"),
+			"@utils": resolvePath(root, "utils"),
+			"@pages": resolvePath(root, "pages"),
+			"@assets": resolvePath(root, "assets"),
+			"@etc": resolvePath(root, "etc")
 		}
 	},
 	
 	build: {
-		outDir: "../docs",
-		assetsDir: "./assets",
-		watch: {}
+		outDir: "../dist",
+		emptyOutDir: true,
+		assetsDir: "./assets"
 	},
 	
 	plugins: [
