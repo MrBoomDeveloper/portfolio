@@ -34,7 +34,7 @@ const dev = {
 
 const prod = {
 	...global,
-	base: "https://mrboomdev.ru/portfolio",
+	base: "/portfolio/",
 	
 	build: {
 		minify: "esbuild"

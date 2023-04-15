@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { HomePage, PrivacyPage, ErrorPage, ProjectPage, Root } from "@routes";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{ path: "/", element: <Root />, errorElement: <ErrorPage />, children: [
 		{ path: "/", element: <HomePage /> },
 		{ path: "privacy", element: <PrivacyPage /> },
