@@ -1,3 +1,124 @@
+@import "@components/variables";
+
+.fancyText {
+	background-image: linear-gradient(90deg, #DA30FF, #B500DD, #DA30FF, #B500DD);
+	color: rgba(255, 255, 255, .2);
+	-webkit-background-clip: text;
+}
+
+.highlight {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-size: 1.3em;
+}
+
 .title {
-	color: red;
+	font-size: 3em;
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+}
+
+.description {
+	font-size: 1.2em;
+	line-height: 1.6;
+	max-width: 550px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	margin-bottom: .6rem;
+}
+
+.hero {
+	position: relative;
+	display: flex;
+	height: 75vh;
+	justify-content: center;
+	
+	&Content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 1000px;
+		gap: 1rem;
+		width: 100%;
+		margin-inline: 2rem;
+		text-align: center;
+	}
+}
+
+@mixin squareAnimation($id, $rotate) {
+	@keyframes #{$id} {
+		0% {
+			opacity: 0;
+			translate: 0 150%;
+			rotate: 0deg;
+		}
+	
+		25% {
+			opacity: .02;
+		}
+	
+		100% {
+			opacity: .1;
+			translate: 0 0;
+			rotate: $rotate;
+		}
+	}
+}
+
+.backgroundAnimation {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	
+	@mixin square($size, $id, $duration, $rotate) {
+		border: solid rgba(240, 87, 255, .5) 5px;
+		background-color: rgba(240, 87, 255, .2);
+		opacity: .1;
+		width: $size;
+		height: $size;
+		position: absolute;
+		border-radius: 10px;
+		rotate: $rotate;
+		@include squareAnimation(squareAnimation#{$id}, 0);
+		animation: squareAnimation#{$id} $duration;
+	}
+	
+	.square1 {
+		@include square(125px, 1, 1s, -300deg);
+		left: 20%;
+		top: 15%;
+	}
+	
+	.square2 {
+		@include square(120px, 2, 1.2s, 10deg);
+		right: 15%;
+		bottom: 10%;
+	}
+	
+	.square3 {
+		@include square(200px, 3, .8s, 100deg);
+		left: 45%;
+		bottom: 30%;
+	}
+	
+	.square4 {
+		@include square(175px, 4, .9s, 200deg);
+		left: 5%;
+		bottom: 0%;
+	}
+	
+	.square5 {
+		@include square(110px, 5, 1.3s, -300deg);
+		top: 5%;
+		right: 10%;
+	}
+}
+
+@media(max-width: 1000px) {
+	.heroContent {
+		padding-inline: 2rem;
+	}
 }

@@ -5,7 +5,9 @@ import styles from "./styles.module.scss";
 export default function Root() {
 	return (
 		<div className={styles.screen}>
-			<Header />
+			<Header>
+				<h1>Burger</h1>
+			</Header>
 			<Outlet />
 			<Footer />
 		</div>

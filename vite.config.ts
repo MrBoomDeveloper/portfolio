@@ -12,6 +12,7 @@ const global = {
 			"@assets": resolve(root, "assets"),
 			"@components": resolve(root, "components"),
 			"@routes": resolve(root, "routes"),
+			"@data": resolve(root, "data"),
 			"@": root
 		},
 		
@@ -29,6 +30,10 @@ const dev = {
 	build: {
 		minify: false,
 		watch: {}
+	},
+	
+	server: {
+		host: true
 	}
 }
 

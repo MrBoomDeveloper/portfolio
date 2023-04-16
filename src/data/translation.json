@@ -1,0 +1,37 @@
+{
+	"ru": {
+		"translation": {
+			"home": {
+				"hi": "Привет, я MrBoomDev!",
+				"description": "Я фронтенд разработчик, создающий стильные и мощные сайты и игры без пк! От React до LibGDX.",
+				"more": "Подробнее"
+			},
+			
+			"skills": {
+				"title": "Мои Навыки"
+			},
+			
+			"contact": {
+				"title": "Связаться со мной"
+			}
+		}
+	},
+	
+	"en": {
+		"translation": {
+			"home": {
+				"hi": "Hey, I'm MrBoomDev!",
+				"description": "I am a front-end developer who creates stylish and powerful sites and games without pc! From React to the LibGDX.",
+				"more": "Learn More"
+			},
+			
+			"skills": {
+				"title": "My Skills"
+			},
+			
+			"contact": {
+				"title": "Contact Me"
+			}
+		}
+	}
+}
