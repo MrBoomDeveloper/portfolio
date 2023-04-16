@@ -43,3 +43,9 @@ img {
 	color: black;
 	background-color: rgba(240, 87, 255, .9);
 }
+
+@media(min-width: 1000px) {
+	.burger {
+		display: none;
+	}
+}

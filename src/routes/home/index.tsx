@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@components/base";
 import styles from "./styles.module.scss";
@@ -8,15 +7,15 @@ export default function HomePage() {
 	
 	return (
 		<>
-			<div className={styles.hero}>
+			<div className={styles.hero} id="hero">
 				<BackgroundAnimation />
 				<div className={styles.heroContent}>
 					<p className={`${styles.fancyText} ${styles.highlight}`}>Frontend Developer</p>
 					<h1 className={styles.title}>{t("home.hi")}</h1>
 					<p className={styles.description}>{t("home.description")}</p>
-					<Link to="https://mrboomdev.ru">
+					<a href="https://mrboomdev.ru" target="_blank">
 						<Button text={t("home.more")} style={{paddingInline: "4rem"}} />
-					</Link>
+					</a>
 				</div>
 			</div>
 			

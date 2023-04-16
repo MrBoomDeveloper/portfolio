@@ -11,7 +11,7 @@ export default function Header({children}: HeaderArguments) {
 	
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			const newIsScrolled = window.pageYOffset > 100;
+			const newIsScrolled = window.pageYOffset > 50;
 			setIsScrolled(newIsScrolled);
 		});
 	}, []);

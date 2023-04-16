@@ -1,0 +1,60 @@
+.container {
+	.link {
+		font-family: "Roboto", sans-serif;
+	}
+}
+
+@media(min-width: 1000px) {
+	.container {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		
+		.content {
+			display: flex;
+			gap: 2.5rem;
+		}
+		
+		.link {
+			font-size: 1.1em;
+			font-weight: 400;
+			
+			p {
+				color: rgba(250, 250, 250, 1);
+			}
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@media(max-width: 1000px) {
+	.container {
+		z-index: -1;
+		padding-top: 5rem;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		transition: .5s;
+		background-color: rgba(11, 5, 21, .8);
+		backdrop-filter: blur(1px);
+		height: 100vh;
+		
+		p {
+			padding: 1rem 3.5rem;
+			font-size: 2em;
+			transition: .2s;
+			
+			&:active {
+				scale: .95;
+				opacity: .7;
+			}
+		}
+		
+		&Active {
+			right: 0;
+		}
+	}
+}

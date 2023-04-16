@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	justify-content: center;
+	padding-inline: 2rem;
+	height: 90vh;
+}
+
+.content {
+	max-width: 1000px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}

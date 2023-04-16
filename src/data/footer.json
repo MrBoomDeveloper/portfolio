@@ -1,0 +1,23 @@
+{
+	"groups": [
+		{
+			"title": "Interesting Links",
+			"data": [
+				{ "title": "My Playlist", "external": true, "link": "https://music.youtube.com/playlist?list=PLSWY81108wBhKajj1EUuBr89ydg-DUjPy&feature=share" },
+				{ "title": "My Blog", "external": true, "link": "https://mrboomdev.bearblog.dev/blog" }
+			]
+		}, {
+			"title": "Your Safety",
+			"data": [
+				{ "title": "Privacy Policy", "link": "privacy" }
+			]
+		}
+	],
+	
+	"social": [
+		{ "title": "Disocrd", "icon": "/icon/discord.png", "link": "https://discord.gg/uCUp8TSCvw" },
+		{ "title": "YouTube", "icon": "/icon/youtube.png", "link": "https://youtube.com/@MrBoomDev" },
+		{ "title": "Telegram", "icon": "/icon/telegram.png", "link": "https://t.me/MrBoomBro" },
+		{ "title": "VKontakte", "icon": "/icon/vk.png", "link": "https://vk.com/mrboomdeveloper" }
+	]
+}

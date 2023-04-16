@@ -117,7 +117,7 @@
 	}
 	
 	.square3 {
-		@include square(200px, 3, .8s, 100deg);
+		@include square(200px, 3, 1.3s, -100deg);
 		left: 45%;
 		bottom: 30%;
 	}
