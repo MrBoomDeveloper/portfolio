@@ -1,1 +1,1 @@
-declare module "@components/layout";
+declare module "@routes";

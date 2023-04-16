@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { HomePage, PrivacyPage, ErrorPage, ProjectPage, Root } from "@routes";
-import translation from "@data/translation";
+import translation from "@data/translation.json";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 

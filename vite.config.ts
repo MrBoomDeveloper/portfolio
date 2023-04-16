@@ -5,8 +5,6 @@ import react from "@vitejs/plugin-react"
 const root = resolve(__dirname, "src");
 
 const global = {
-	publicDir: "/src/assets/",
-	
 	resolve: {
 		alias: {
 			"@assets": resolve(root, "assets"),

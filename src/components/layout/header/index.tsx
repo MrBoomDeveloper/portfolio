@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
 
-export default function Header({children}) {
+interface HeaderArguments {
+	children?: any
+}
+
+export default function Header({children}: HeaderArguments) {
 	const [isScrolled, setIsScrolled] = useState(false);
 	
 	useEffect(() => {
