@@ -1,23 +1,24 @@
 {
 	"groups": [
 		{
-			"title": "Interesting Links",
+			"title": "footer.interesting",
 			"data": [
-				{ "title": "My Playlist", "external": true, "link": "https://music.youtube.com/playlist?list=PLSWY81108wBhKajj1EUuBr89ydg-DUjPy&feature=share" },
-				{ "title": "My Blog", "external": true, "link": "https://mrboomdev.bearblog.dev/blog" }
+				{ "title": "footer.playlist", "external": true, "link": "https://music.youtube.com/playlist?list=PLSWY81108wBhKajj1EUuBr89ydg-DUjPy&feature=share" },
+				{ "title": "footer.blog", "external": true, "link": "https://mrboomdev.bearblog.dev/blog" }
 			]
 		}, {
-			"title": "Your Safety",
+			"title": "footer.safety",
 			"data": [
-				{ "title": "Privacy Policy", "link": "privacy" }
+				{ "title": "footer.privacy", "link": "privacy" }
 			]
 		}
 	],
 	
 	"social": [
-		{ "title": "Disocrd", "icon": "/icon/discord.png", "link": "https://discord.gg/uCUp8TSCvw" },
+		{ "title": "Disocrd", "icon": "/icon/discord.svg", "link": "https://discord.gg/uCUp8TSCvw" },
 		{ "title": "YouTube", "icon": "/icon/youtube.png", "link": "https://youtube.com/@MrBoomDev" },
 		{ "title": "Telegram", "icon": "/icon/telegram.png", "link": "https://t.me/MrBoomBro" },
-		{ "title": "VKontakte", "icon": "/icon/vk.png", "link": "https://vk.com/mrboomdeveloper" }
+		{ "title": "VKontakte", "icon": "/icon/vk.png", "link": "https://vk.com/mrboomdeveloper" },
+		{ "title": "GameJolt", "icon": "/icon/gamejolt.png", "link": "https://gamejolt.com/@MrBoomDev" }
 	]
 }

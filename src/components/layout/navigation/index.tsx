@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { general } from "@data/header.json";
 import styles from "./styles.module.scss";
 
@@ -12,13 +13,15 @@ interface NavigationItem {
 }
 
 export default function Navigation({isActive}: NavigationArguments) {
+	const { t } = useTranslation();
+	
 	return (
 		<div className={`${styles.container} ${isActive && styles.containerActive}`}>
 			<div className={styles.content}>
 				{general.map(({link, title}: NavigationItem) => {
 					return (
 						<Link to={link} className={styles.link}>
-							<p>{title}</p>
+							<p>{t(title)}</p>
 						</Link>
 					);
 				})}

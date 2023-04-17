@@ -8,11 +8,35 @@
 			},
 			
 			"skills": {
-				"title": "Мои Навыки"
+				"title": "Мои Навыки",
+				"description": "С данными технологиями я работаю почти постаянно."
+			},
+			
+			"projects": {
+				"title": "Мои Проекты"
 			},
 			
 			"contact": {
-				"title": "Связаться со мной"
+				"title": "Связаться со мной",
+				"description": "Есть вопрос? Напиши мне!"
+			},
+			
+			"footer": {
+				"interesting": "Интересное",
+				"safety": "Безопасность",
+				"social": "Соц Сети",
+				"made": "Сайт был сделан в 2023 используя React.",
+				
+				"playlist": "Мой Плейлист",
+				"blog": "Мой Блог",
+				"privacy": "Политика Конфедициальности"
+			},
+			
+			"navigation": {
+				"home": "Главная",
+				"skills": "Навыки",
+				"projects": "Проекты",
+				"contact": "Связаться"
 			}
 		}
 	},
@@ -29,8 +53,30 @@
 				"title": "My Skills"
 			},
 			
+			"projects": {
+				"title": "My Projects"
+			},
+			
 			"contact": {
 				"title": "Contact Me"
+			},
+			
+			"footer": {
+				"interesting": "Interesring",
+				"safety": "Your Safety",
+				"social": "Social Media",
+				"made": "Site was made in 2023 by using React.",
+				
+				"playlist": "My Playlist",
+				"blog": "My Blog",
+				"privacy": "Privacy Policy"
+			},
+			
+			"navigation": {
+				"home": "Home",
+				"skills": "Skills",
+				"projects": "Projects",
+				"contact": "Contact"
 			}
 		}
 	}
