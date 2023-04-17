@@ -37,7 +37,7 @@ const dev = {
 
 const prod = {
 	...global,
-	base: "/portfolio/",
+	base: "/",
 	
 	build: {
 		minify: "esbuild"
