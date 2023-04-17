@@ -48,8 +48,8 @@ export default function Footer() {
 								<div className={styles.iconHolder}>
 									<img className={styles.icon}
 										src={icon}
-										alt={t(title)}
-										title={t(title)} />
+										alt={t(title) || "Failed to load"}
+										title={t(title) || "Failed to load"} />
 								</div>
 							</a>
 						);
