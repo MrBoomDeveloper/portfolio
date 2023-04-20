@@ -9,7 +9,8 @@
 		}, {
 			"title": "footer.safety",
 			"data": [
-				{ "title": "footer.privacy", "link": "privacy" }
+				{ "title": "policy.privacy.title", "link": "privacy" },
+				{ "title": "policy.terms.title", "link": "terms" }
 			]
 		}
 	],

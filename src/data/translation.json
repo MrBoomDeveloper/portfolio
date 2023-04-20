@@ -28,8 +28,7 @@
 				"made": "Сайт был сделан в 2023 используя React.",
 				
 				"playlist": "Мой Плейлист",
-				"blog": "Мой Блог",
-				"privacy": "Политика Конфедициальности"
+				"blog": "Мой Блог"
 			},
 			
 			"navigation": {
@@ -37,6 +36,18 @@
 				"skills": "Навыки",
 				"projects": "Проекты",
 				"contact": "Связаться"
+			},
+			
+			"policy": {
+				"email": "Если у вас есть какие-либо вопросы, пожалуйста, пишите на этот адрес электронной почты",
+				"updated": "Последнее обновление",
+				"privacy": {
+					"title": "Политика Конфедициальности"
+				},
+				
+				"terms": {
+					"title": "Пользовательское Соглашение"
+				}
 			}
 		}
 	},
@@ -68,8 +79,7 @@
 				"made": "Site was made in 2023 by using React.",
 				
 				"playlist": "My Playlist",
-				"blog": "My Blog",
-				"privacy": "Privacy Policy"
+				"blog": "My Blog"
 			},
 			
 			"navigation": {
@@ -77,6 +87,18 @@
 				"skills": "Skills",
 				"projects": "Projects",
 				"contact": "Contact"
+			},
+			
+			"policy": {
+				"email": "If you have any questions, please write to this email",
+				"updated": "Last updated",
+				"privacy": {
+					"title": "Privacy Policy"
+				},
+				
+				"terms": {
+					"title": "Terms of Use"
+				}
 			}
 		}
 	}
