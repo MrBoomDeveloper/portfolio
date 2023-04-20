@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@components/base";
+import Section from "./sections";
 import styles from "./styles.module.scss";
 
 export default function HomePage() {
@@ -19,19 +20,19 @@ export default function HomePage() {
 				</div>
 			</div>
 			
-			<div>
+			<Section fill={true}>
 				<h1>{t("skills.title")}</h1>
 				<p>{t("skills.description")}</p>
-			</div>
+			</Section>
 			
-			<div>
+			<Section fill={false}>
 				<h1>{t("projects.title")}</h1>
-			</div>
+			</Section>
 			
-			<div>
+			<Section fill={true}>
 				<h1>{t("contact.title")}</h1>
 				<p>{t("contact.description")}</p>
-			</div>
+			</Section>
 		</>
 	);
 }

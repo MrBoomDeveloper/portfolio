@@ -70,7 +70,8 @@
 			},
 			
 			"skills": {
-				"title": "My Skills"
+				"title": "My Skills",
+				"description": ""
 			},
 			
 			"projects": {
@@ -78,7 +79,8 @@
 			},
 			
 			"contact": {
-				"title": "Contact Me"
+				"title": "Contact Me",
+				"description": ""
 			},
 			
 			"footer": {

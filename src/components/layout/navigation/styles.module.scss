@@ -45,6 +45,11 @@
 		backdrop-filter: blur(1px);
 		height: 100vh;
 		
+		.content {
+			scale: .5;
+			transition: .5s;
+		}
+		
 		p {
 			padding: 1.5rem 4rem;
 			font-size: 2.2em;
@@ -58,6 +63,10 @@
 		
 		&Active {
 			right: 0;
+			
+			.content {
+				scale: 1;
+			}
 		}
 	}
 }
