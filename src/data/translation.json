@@ -24,8 +24,8 @@
 			"footer": {
 				"interesting": "Интересное",
 				"safety": "Безопасность",
-				"social": "Соц Сети",
-				"made": "Сайт был сделан в 2023 используя React.",
+				"social": "Мои Соц-Сети",
+				"made": "Сайт был сделан в 2023 используя React и Github Pages.",
 				
 				"playlist": "Мой Плейлист",
 				"blog": "Мой Блог"
@@ -42,7 +42,16 @@
 				"email": "Если у вас есть какие-либо вопросы, пожалуйста, пишите на этот адрес электронной почты",
 				"updated": "Последнее обновление",
 				"privacy": {
-					"title": "Политика Конфедициальности"
+					"title": "Политика Конфедициальности",
+					"fields": {
+						"collect": "Мы собираем только те данные, которые необходимы для работы нашего приложения, использующего Google API, такие как: ваш адрес электронной почты, IP-адрес, тип устройства и его имя.",
+						"share": "Мы не передаем пользовательские данные третьим лицам без их явного согласия.",
+						"use": "Мы используем эти данные только для улучшения взаимодействия с пользователем и функционирования нашего приложения.",
+						"security": "Мы обеспечиваем безопасность данных пользователей и принимаем все меры для защиты их конфиденциальности.",
+						"rights": "Пользователи имеют право доступа, изменения и удаления своих персональных данных.",
+						"dont": "Мы не собираем данные о личных предпочтениях, политических или религиозных взглядах пользователей.",
+						"changes": "Мы будем информировать пользователей о любых изменениях в политике конфиденциальности и получать их согласие на эти изменения."
+					}
 				},
 				
 				"terms": {
@@ -76,7 +85,7 @@
 				"interesting": "Interesring",
 				"safety": "Your Safety",
 				"social": "Social Media",
-				"made": "Site was made in 2023 by using React.",
+				"made": "Site was made in 2023 by using React and Github Pages.",
 				
 				"playlist": "My Playlist",
 				"blog": "My Blog"
@@ -93,7 +102,16 @@
 				"email": "If you have any questions, please write to this email",
 				"updated": "Last updated",
 				"privacy": {
-					"title": "Privacy Policy"
+					"title": "Privacy Policy",
+					"fields": {
+						"collect": "We only collect the data necessary for the functioning of our application, which uses Google API, such as: your email address, ip address, device type and it's name.",
+						"share": "We do not share user data with third parties without their explicit consent.",
+						"use": "We use this data only to improve the user experience and the functioning of our application.",
+						"security": "We ensure the security of user data and take all measures to protect their confidentiality.",
+						"rights": "Users have the right to access, modify, and delete their personal data.",
+						"dont": "We do not collect data on users' personal preferences, political or religious views.",
+						"changes": "We will inform users of any changes to the privacy policy and obtain their consent for these changes."
+					}
 				},
 				
 				"terms": {

@@ -3,14 +3,13 @@
 		"lastUpdated": "2023-04-20",
 		"title": "policy.privacy.title",
 		"data": [
-			"We only collect the data necessary for the functioning of our application, which uses Google API.",
-			"We do not share user data with third parties without their explicit consent.",
-			"We use this data only to improve the user experience and the functioning of our application.",
-			"We ensure the security of user data and take all measures to protect their confidentiality.",
-			"Users have the right to access, modify, and delete their personal data.",
-			"We do not collect data on users' personal preferences, political or religious views.",
-			"We do not use personal user data for advertising purposes.",
-			"We will inform users of any changes to the privacy policy and obtain their consent for these changes."
+			"policy.privacy.fields.collect",
+			"policy.privacy.fields.share",
+			"policy.privacy.fields.use",
+			"policy.privacy.fields.security",
+			"policy.privacy.fields.rights",
+			"policy.privacy.fields.dont",
+			"policy.privacy.fields.changes"
 		]
 	},
 	
