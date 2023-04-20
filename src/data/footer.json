@@ -12,6 +12,12 @@
 				{ "title": "policy.privacy.title", "link": "privacy" },
 				{ "title": "policy.terms.title", "link": "terms" }
 			]
+		}, {
+			"title": "Archive",
+			"data": [
+				{ "title": "Webpack version of this site", "external": true, "link": "https://github.com/MrBoomDeveloper/OldPortfolio" },
+				{ "title": "Old Stuff and Projects", "external": true, "link": "https://archive.mrboomdev.ru" }
+			]
 		}
 	],
 	

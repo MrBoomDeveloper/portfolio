@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Button } from "@components/base";
+import { Button, Card } from "@components/base";
 import Section from "./sections";
 import styles from "./styles.module.scss";
 
@@ -14,25 +15,45 @@ export default function HomePage() {
 					<p className={`${styles.fancyText} ${styles.highlight}`}>Frontend Developer</p>
 					<h1 className={styles.title}>{t("home.hi")}</h1>
 					<p className={styles.description}>{t("home.description")}</p>
-					<a href="https://mrboomdev.ru" target="_blank">
+					<Link to="/#hero">
 						<Button text={t("home.more")} style={{paddingInline: "4rem"}} />
-					</a>
+					</Link>
 				</div>
 			</div>
 			
-			<Section fill={true}>
-				<h1>{t("skills.title")}</h1>
-				<p>{t("skills.description")}</p>
+			<Section fill={true} style={{paddingBlock: 0}}>
+				<div style={{display: "flex", position: "relative"}} className={styles.skills}>
+					<div style={{paddingBlock: "3rem", flexGrow: 1}}>
+						<h1 className={styles.sectionTitle}>{t("skills.title")}</h1>
+						<div style={{display: "flex", flexWrap: "wrap"}} className={styles.skillsList}>
+							<Card title="TypeScript" icon="/icon/skill/typescript.png" />
+							<Card title="React" icon="/icon/skill/react.png" />
+							<Card title="Sass" icon="/icon/skill/sass.png" />
+							<Card title="Java" icon="/icon/skill/java.png" />
+							<Card title="Android" icon="/icon/skill/android.png" />
+							<Card title="LibGDX" icon="/icon/skill/game.png" />
+						</div>
+					</div>
+					<img src="/art/freddy_programmer.png" className={styles.freddy} loading="lazy" />
+				</div>
 			</Section>
 			
-			<Section fill={false}>
-				<h1>{t("projects.title")}</h1>
-			</Section>
+			{/*<Section fill={false} style={{paddingBlock: "3rem"}}>
+				<h1 className={styles.sectionTitle}>{t("projects.title")}</h1>
+			</Section>*/}
 			
-			<Section fill={true}>
-				<h1>{t("contact.title")}</h1>
-				<p>{t("contact.description")}</p>
-			</Section>
+			{/*<Section fill={true} style={{paddingBlock: "3rem"}}>
+				<div>
+					<h1 className={styles.sectionTitle}>{t("contact.title")}</h1>
+					<p>{t("contact.description")}</p>
+					<form action="https://www.google.com" style={{display: "flex", flexDirection: "column", maxWidth: "500px", gap: ".5rem"}}>
+						<input type="email" placeholder="Email" style={{padding: ".5em", color: "black"}} />
+						<input type="text" placeholder="Your Name" style={{padding: ".5em", color: "black"}} />
+						<textarea placeholder="Your Message..." style={{padding: ".5em", color: "black", height: "5rem"}} />
+						<Button text="Submit" />
+					</form>
+				</div>
+			</Section>*/}
 		</>
 	);
 }

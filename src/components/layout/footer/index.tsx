@@ -21,6 +21,22 @@ export default function Footer() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
+				<h2>{t("footer.social")}</h2>
+				<div className={styles.social}>
+					{social.map(({link, title, icon}: FooterItem) => {
+						return (
+							<a href={link} target="_blank">
+								<div className={styles.iconHolder}>
+									<img className={styles.icon}
+										src={icon}
+										alt={t(title) || "Failed to load"}
+										title={t(title) || "Failed to load"} />
+								</div>
+							</a>
+						);
+					})}
+				</div>
+				
 				<div className={styles.groups}>
 					{groups.map(({title, data}: FooterGroup) => {
 						return (
@@ -40,24 +56,12 @@ export default function Footer() {
 					})}
 				</div>
 				
-				<h2>{t("footer.social")}</h2>
-				<div className={styles.social}>
-					{social.map(({link, title, icon}: FooterItem) => {
-						return (
-							<a href={link} target="_blank">
-								<div className={styles.iconHolder}>
-									<img className={styles.icon}
-										src={icon}
-										alt={t(title) || "Failed to load"}
-										title={t(title) || "Failed to load"} />
-								</div>
-							</a>
-						);
-					})}
-				</div>
-				
 				<div className={styles.separator}></div>
-				<p style={{marginTop: "2rem", display: "block", opacity: .9}}>{t("footer.made")}</p>
+				<p style={{marginTop: "2rem", display: "block", opacity: .9, lineHeight: 1.5}}>
+					{t("footer.made")}
+					<span style={{width: ".35rem", display: "inline-block"}}></span>
+					<a href="https://www.flaticon.com" target="_blank">Icons was made by Flaticon.</a>
+				</p>
 			</div>
 		</div>
 	);

@@ -2,15 +2,16 @@ import styles from "./styles.module.scss";
 
 interface SectionArguments {
 	fill: boolean,
-	children: any
+	children: any,
+	style?: any
 }
 
-export default function Section({children, fill}: SectionArguments) {
-	let style: string = styles.container;
-	if(fill) style += " " + styles.filled;
+export default function Section({children, fill, style}: SectionArguments) {
+	let className: string = styles.container;
+	if(fill) className += " " + styles.filled;
 	
 	return (
-		<div className={style}>
+		<div className={className} style={style}>
 			<div className={styles.content}>
 				{children}
 			</div>
