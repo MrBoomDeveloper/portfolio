@@ -11,7 +11,7 @@
 .fancyText {
 	background-image: linear-gradient(90deg, #DA30FF, #B500DD, #DA30FF, #B500DD);
 	color: rgba(255, 255, 255, .2);
-	-webkit-background-clip: text;
+	background-clip: text;
 }
 
 .sectionTitle {
@@ -47,6 +47,25 @@
 	display: flex;
 	height: 75vh;
 	justify-content: center;
+	overflow: hidden;
+
+	&Foxy {
+		position: absolute;
+		bottom: 0;
+		height: 250px;
+		left: 0;
+		animation: foxyRunningAnimation 10s infinite;
+	}
+
+	@keyframes foxyRunningAnimation {
+		from {
+			translate: -5000px 0;
+		}
+
+		to {
+			translate: 5000px 0;
+		}
+	}
 	
 	&Content {
 		display: flex;

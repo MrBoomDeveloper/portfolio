@@ -19,6 +19,9 @@ export default function HomePage() {
 						<Button text={t("home.more")} style={{paddingInline: "4rem"}} />
 					</Link>
 				</div>
+
+				<img src="art/foxy.gif" className={styles.heroFoxy}
+					title="Pixel foxy running" alt="Pixel foxy running" />
 			</div>
 			
 			<Section fill={true} style={{paddingBlock: 0}}>
