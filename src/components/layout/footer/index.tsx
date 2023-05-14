@@ -5,12 +5,14 @@ import styles from "./styles.module.scss";
 
 interface FooterGroup {
 	title: string,
-	data: FooterItem[]
+	data: FooterItem[],
+	key: string
 }
 
 interface FooterItem {
 	title: string,
 	link: string,
+	key: string,
 	icon?: string,
 	external?: boolean
 }
@@ -23,9 +25,9 @@ export default function Footer() {
 			<div className={styles.content}>
 				<h2>{t("footer.social")}</h2>
 				<div className={styles.social}>
-					{social.map(({link, title, icon}: FooterItem) => {
+					{social.map(({link, title, icon, key}: FooterItem) => {
 						return (
-							<a href={link} target="_blank">
+							<a href={link} target="_blank" key={key}>
 								<div className={styles.iconHolder}>
 									<img className={styles.icon}
 										src={icon}
@@ -38,17 +40,17 @@ export default function Footer() {
 				</div>
 				
 				<div className={styles.groups}>
-					{groups.map(({title, data}: FooterGroup) => {
+					{groups.map(({title, data, key}: FooterGroup) => {
 						return (
-							<div className={styles.group}>
+							<div className={styles.group} key={key}>
 								<h2>{t(title)}</h2>
-								{data.map(({title, external, link}: FooterItem) => {
+								{data.map(({title, external, link, key}: FooterItem) => {
 									const text = <p className={styles.link}>{t(title)}</p>;
 									
 									if(!external) {
-										return <Link to={link}>{text}</Link>;
+										return <Link to={link} key={key}>{text}</Link>;
 									} else {
-										return <a href={link} target="_blank">{text}</a>;
+										return <a href={link} target="_blank" key={key}>{text}</a>;
 									}
 								})}
 							</div>

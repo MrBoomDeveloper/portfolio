@@ -1,8 +1,8 @@
 {
 	"general": [
-		{ "title": "navigation.home", "link": "/#hero" },
-		{ "title": "navigation.skills", "link": "/#skills" },
-		{ "title": "navigation.projects", "link": "/#projects" },
-		{ "title": "navigation.contact", "link": "/#contact" }
+		{ "title": "navigation.home", "link": "/#hero", "key": "home" },
+		{ "title": "navigation.skills", "link": "/#skills", "key": "skills" },
+		{ "title": "navigation.projects", "link": "/#projects", "key": "projects" },
+		{ "title": "navigation.contact", "link": "/#contact", "key": "contact" }
 	]
 }

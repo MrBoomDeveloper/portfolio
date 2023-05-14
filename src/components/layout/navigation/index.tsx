@@ -9,7 +9,8 @@ interface NavigationArguments {
 
 interface NavigationItem {
 	link: string,
-	title: string
+	title: string,
+	key: string
 }
 
 export default function Navigation({isActive}: NavigationArguments) {
@@ -18,9 +19,9 @@ export default function Navigation({isActive}: NavigationArguments) {
 	return (
 		<div className={`${styles.container} ${isActive && styles.containerActive}`}>
 			<div className={styles.content}>
-				{general.map(({link, title}: NavigationItem) => {
+				{general.map(({link, title, key}: NavigationItem) => {
 					return (
-						<Link to={link} className={styles.link}>
+						<Link to={link} className={styles.link} key={key}>
 							<p>{t(title)}</p>
 						</Link>
 					);

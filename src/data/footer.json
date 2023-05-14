@@ -1,31 +1,62 @@
 {
 	"groups": [
 		{
-			"title": "footer.interesting",
+			"title": "footer.interesting", "key": "interesting",
 			"data": [
-				{ "title": "footer.playlist", "external": true, "link": "https://music.youtube.com/playlist?list=PLSWY81108wBhKajj1EUuBr89ydg-DUjPy&feature=share" },
-				{ "title": "footer.blog", "external": true, "link": "https://mrboomdev.bearblog.dev/blog" }
+				{ 
+					"title": "footer.playlist", "key": "playlist",
+					"external": true, "link": "https://music.youtube.com/playlist?list=PLSWY81108wBhKajj1EUuBr89ydg-DUjPy&feature=share" 
+				}, { 
+					"title": "footer.blog", "key": "blog",
+					"external": true, "link": "https://mrboomdev.bearblog.dev/blog" 
+				}
 			]
 		}, {
-			"title": "footer.safety",
+			"title": "footer.safety", "key": "safety",
 			"data": [
-				{ "title": "policy.privacy.title", "link": "privacy" },
-				{ "title": "policy.terms.title", "link": "terms" }
+				{ 
+					"title": "policy.privacy.title", "key": "privacy",
+					"link": "privacy" 
+				}, { 
+					"title": "policy.terms.title", "key": "terms",
+					"link": "terms" 
+				}
 			]
 		}, {
-			"title": "Archive",
+			"title": "Archive", "key": "archive",
 			"data": [
-				{ "title": "Webpack version of this site", "external": true, "link": "https://github.com/MrBoomDeveloper/OldPortfolio" },
-				{ "title": "Old Stuff and Projects", "external": true, "link": "https://archive.mrboomdev.ru" }
+				{ 
+					"title": "Webpack version of this site", "key": "webpack",
+					"external": true, "link": "https://github.com/MrBoomDeveloper/OldPortfolio" 
+				}, { 
+					"title": "Old Stuff and Projects", "key": "old",
+					"external": true, "link": "https://archive.mrboomdev.ru" 
+				}
 			]
 		}
 	],
 	
 	"social": [
-		{ "title": "Disocrd", "icon": "/icon/discord.svg", "link": "https://discord.gg/uCUp8TSCvw" },
-		{ "title": "YouTube", "icon": "/icon/youtube.png", "link": "https://youtube.com/@MrBoomDev" },
-		{ "title": "Telegram", "icon": "/icon/telegram.png", "link": "https://t.me/MrBoomBro" },
-		{ "title": "VKontakte", "icon": "/icon/vk.png", "link": "https://vk.com/mrboomdeveloper" },
-		{ "title": "GameJolt", "icon": "/icon/gamejolt.png", "link": "https://gamejolt.com/@MrBoomDev" }
+		{ 
+			"title": "Disocrd", "key": "discord",
+			"icon": "/icon/discord.svg", 
+			"link": "https://discord.gg/uCUp8TSCvw"
+		}, { 
+			"title": "YouTube", "key": "youtube",
+			"icon": "/icon/youtube.png", 
+			"link": "https://youtube.com/@MrBoomDev" 
+		}, { 
+			"title": "Telegram", "key": "telegram",
+			"icon": "/icon/telegram.png", 
+			"link": "https://t.me/MrBoomBro" 
+		}, { 
+			"title": "VKontakte", "key": "vk",
+			"icon": "/icon/vk.png", 
+			"link": "https://vk.com/mrboomdeveloper" 
+		}, { 
+			"title": "GameJolt", "key": "gamejolt",
+			"icon": "/icon/gamejolt.png", 
+			"link": "https://gamejolt.com/@MrBoomDev" 
+		}
 	]
 }
