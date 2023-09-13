@@ -2,16 +2,10 @@
 
 @mixin border($color, $size) {
 	filter:
-	drop-shadow($size 0 0 $color)
-	drop-shadow(0 $size 0 $color)
-	drop-shadow(-#{$size} 0 0 $color)
-	drop-shadow(0 -#{$size} 0 $color);
-}
-
-.fancyText {
-	background-image: linear-gradient(90deg, #DA30FF, #B500DD, #DA30FF, #B500DD);
-	color: rgba(255, 255, 255, .2);
-	background-clip: text;
+		drop-shadow($size 0 0 $color)
+		drop-shadow(0 $size 0 $color)
+		drop-shadow(-#{$size} 0 0 $color)
+		drop-shadow(0 -#{$size} 0 $color);
 }
 
 .sectionTitle {
@@ -25,6 +19,7 @@
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
 	font-size: 1.3em;
+	color: #DA30FF;
 }
 
 .title {
@@ -45,7 +40,6 @@
 .hero {
 	position: relative;
 	display: flex;
-	height: 75vh;
 	justify-content: center;
 	overflow: hidden;
 
@@ -174,7 +168,16 @@
 	display: inline-block;
 }
 
+.actions {
+	display: flex;
+	gap: .8rem;
+}
+
 @media(min-width: 1000px) {
+	.hero {
+		height: 75vh;
+	}
+
 	.skillsList {
 		gap: 1rem;
 	}
@@ -190,6 +193,17 @@
 @media(max-width: 1000px) {
 	.heroContent {
 		padding-inline: 2rem;
+		padding-block: 6rem;
+		min-height: 75vh;
+	}
+
+	.actions {
+		flex-direction: column;
+		gap: .5rem;
+
+		& > * > * {
+			width: 10rem;
+		}
 	}
 	
 	.skills {

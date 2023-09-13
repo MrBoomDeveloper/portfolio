@@ -1,10 +1,13 @@
 {
 	"ru": {
 		"translation": {
+			"no_description": "Описание не было предоставленно.",
+
 			"home": {
 				"hi": "Привет, я MrBoomDev!",
-				"description": "Я фронтенд разработчик, создающий стильные и мощные сайты и игры без пк! От React до LibGDX.",
-				"more": "Подробнее"
+				"description": "Создаю стильные и эпичные игры, сайты и приложения для мобильных устройств.",
+				"see_project": "Взглянуть на Проекты",
+				"learn_more": "Узнать Больше"
 			},
 			
 			"skills": {
@@ -63,10 +66,13 @@
 	
 	"en": {
 		"translation": {
+			"no_description": "No description were provided",
+
 			"home": {
 				"hi": "Hey, I'm MrBoomDev!",
-				"description": "I am a front-end developer who creates stylish and powerful sites and games without pc! From React to the LibGDX.",
-				"more": "Learn More"
+				"description": "I create stylish and epic games, websites and applications for mobile devices.",
+				"see_projects": "See Projects",
+				"learn_more": "Learn More"
 			},
 			
 			"skills": {
@@ -75,7 +81,11 @@
 			},
 			
 			"projects": {
-				"title": "My Projects"
+				"title": "My Projects",
+
+				"binacty": {
+					"description": "Binacty is a free game engine that allows you to bring your ideas to reality in just minutes! The internal editor allows you to start creating your own games right from your mobile device."
+				}
 			},
 			
 			"contact": {

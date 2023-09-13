@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Button, Card } from "@components/base";
+import Card from "@components/base/card";
+import Button from "@components/base/button";
 import Section from "./sections";
 import styles from "./styles.module.scss";
+import { useEffect, useRef } from "react";
+import Projects from "./sections/projects";
+import Aboutme from "./sections/aboutme";
 
 export default function HomePage() {
+	const projectsSection = useRef<HTMLDivElement>(null);
 	const { t } = useTranslation();
 	
 	return (
@@ -12,19 +16,37 @@ export default function HomePage() {
 			<div className={styles.hero} id="hero">
 				<BackgroundAnimation />
 				<div className={styles.heroContent}>
-					<p className={`${styles.fancyText} ${styles.highlight}`}>Frontend Developer</p>
+					<p className={styles.highlight}>Frontend Developer</p>
 					<h1 className={styles.title}>{t("home.hi")}</h1>
 					<p className={styles.description}>{t("home.description")}</p>
-					<Link to="/#hero">
-						<Button text={t("home.more")} style={{paddingInline: "4rem"}} />
-					</Link>
+					
+					<div className={styles.actions}>
+						<Button text={t("home.see_projects")} 
+							style={{paddingInline: "2.4rem"}}
+							onPress={() => {
+								const offset = (projectsSection.current?.offsetTop || 0) - 100;
+								window.scrollTo({ top: offset, behavior: "smooth" })
+							}} />
+
+						<Button text={t("contact.title")} 
+							style={{paddingInline: "2.4rem"}}
+							onPress={() => {
+								const offset = (projectsSection.current?.offsetTop || 0) - 100;
+								window.scrollTo({ top: offset, behavior: "smooth" })
+							}} />
+					</div>
 				</div>
 
 				<img src="art/foxy.gif" className={styles.heroFoxy}
 					title="Pixel foxy running" alt="Pixel foxy running" />
 			</div>
+
+			<Section fill={true}>
+				<div ref={projectsSection} />
+				<Projects />
+			</Section>
 			
-			<Section fill={true} style={{paddingBlock: 0}}>
+			<Section fill={false} style={{paddingBlock: 0}}>
 				<div style={{display: "flex", position: "relative"}} className={styles.skills}>
 					<div style={{paddingBlock: "3rem", flexGrow: 1}}>
 						<h1 className={styles.sectionTitle}>{t("skills.title")}</h1>
@@ -39,6 +61,10 @@ export default function HomePage() {
 					</div>
 					<img src="/art/freddy_programmer.png" className={styles.freddy} loading="lazy" />
 				</div>
+			</Section>
+
+			<Section fill={true}>
+				<Aboutme />
 			</Section>
 			
 			{/*<Section fill={false} style={{paddingBlock: "3rem"}}>

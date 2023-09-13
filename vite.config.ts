@@ -1,10 +1,10 @@
 import { resolve } from "path";
-import { defineConfig } from "vite"
+import { UserConfig, defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 
 const root = resolve(__dirname, "src");
 
-const global = {
+const global: UserConfig = {
 	resolve: {
 		alias: {
 			"@assets": resolve(root, "assets"),
@@ -22,7 +22,7 @@ const global = {
 	]
 }
 
-const dev = {
+const dev: UserConfig = {
 	...global,
 	
 	build: {
@@ -35,12 +35,12 @@ const dev = {
 	}
 }
 
-const prod = {
+const prod: UserConfig = {
 	...global,
 	base: "/",
 	
 	build: {
-		minify: "esbuild"
+		minify: true
 	}
 }
 

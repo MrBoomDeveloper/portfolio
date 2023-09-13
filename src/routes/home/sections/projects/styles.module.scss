@@ -1,0 +1,71 @@
+.projects {
+	display: flex;
+	flex-direction: column;
+	gap: .6rem;
+}
+
+.project {
+	border-radius: 10px;
+	width: "100%";
+	display: flex;
+	background-color: rgb(24, 11, 36);
+	transition: .2s;
+
+	& > img {
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
+
+	& > div {
+		padding-block: 1.5rem;
+		padding-inline: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: .6rem;
+	}
+
+	&:hover {
+		opacity: .7;
+	}
+}
+
+.description {
+	line-height: 1.55;
+	font-size: .95em;
+	color: rgb(231, 217, 230);
+}
+
+@media(min-width: 1000px) {
+	.project {
+		& > img {
+			width: 22rem;
+			border-radius: 10px 0 0 10px;
+		}
+
+		& > div {
+			flex-grow: 1;
+		}
+	}
+
+	.projectReverse {
+		flex-direction: row-reverse;
+	}
+}
+
+@media(max-width: 1000px) {
+	.project {
+		flex-direction: column;
+
+		& > img {
+			width: 100%;
+			border-radius: 10px 10px 0 0;
+		}
+
+		.description {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+		}
+	}
+}
