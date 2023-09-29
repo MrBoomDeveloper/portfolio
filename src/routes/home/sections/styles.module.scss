@@ -1,14 +1,19 @@
+@import "@components/variables";
+
 .container {
 	display: flex;
 	justify-content: center;
 	padding: 2rem;
 	
 	&.filled {
-		background-image: radial-gradient(transparent, rgba(0, 0, 0, .15));
+		background-image: radial-gradient(
+			rgba(0, 0, 0, .05),
+			rgba(0, 0, 0, .175)
+		);
 	}
 }
 
 .content {
-	max-width: 1000px;
+	max-width: $responsibilityBreakpoint;
 	width: 100%;
 }

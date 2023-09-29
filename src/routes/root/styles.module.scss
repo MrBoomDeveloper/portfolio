@@ -15,7 +15,7 @@ input, textarea {
 }
 
 h1, h2, h3, h4, h5, h6, a, p, li, label, span, textarea, input, img {
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	color: white;
 	line-height: 1.2;
 	vertical-align: baseline;
@@ -44,7 +44,7 @@ img {
 	background-color: rgba(240, 87, 255, .9);
 }
 
-@media(min-width: 1000px) {
+@media(min-width: $responsibilityBreakpoint) {
 	.burger {
 		display: none;
 	}

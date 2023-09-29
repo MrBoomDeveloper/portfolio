@@ -1,0 +1,56 @@
+@import "@components/variables";
+
+.row {
+	display: flex;
+	gap: 1.4rem;
+}
+
+.separator {
+	display: block;
+	background-color: rgba(148, 148, 148, 0.25);
+	width: 2px;
+	border-radius: 2px;
+	height: 2rem;
+	align-self: center;
+}
+
+.skill {
+	width: 2rem;
+	height: 2rem;
+	object-fit: contain;
+}
+
+.items {
+	display: flex;
+	gap: 1.6rem;
+}
+
+@media (max-width: $responsibilityBreakpoint) and (orientation: portrait) {
+	.separator {
+		display: none;
+	}
+
+	.row {
+		text-align: center;
+		flex-direction: column;
+		gap: 2rem;
+
+		& > h1 {
+			width: 100%;
+			font-size: 2.1em;
+		}
+	}
+
+	.items {
+		justify-content: center;
+		gap: 1rem;
+
+		& > .skill {
+			border-radius: 5px;
+			width: 3rem;
+			height: 3rem;
+			padding: .5rem;
+			background-color: hsl(264, 55%, 13%);
+		}
+	}
+}

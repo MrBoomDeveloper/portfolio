@@ -5,7 +5,7 @@
 
 			"home": {
 				"hi": "Привет, я MrBoomDev!",
-				"description": "Создаю стильные и эпичные игры, сайты и приложения для мобильных устройств.",
+				"description": "Мне нравиться создавать стильные и эпичные игры, сайты и приложения для мобильных устройств.",
 				"see_project": "Взглянуть на Проекты",
 				"learn_more": "Узнать Больше"
 			},
@@ -29,6 +29,7 @@
 				"safety": "Безопасность",
 				"social": "Мои Соц-Сети",
 				"made": "Сайт был сделан в 2023 используя React и Github Pages.",
+				"flaticon": "Иконки были созданы",
 				
 				"playlist": "Мой Плейлист",
 				"blog": "Мой Блог"
@@ -70,7 +71,7 @@
 
 			"home": {
 				"hi": "Hey, I'm MrBoomDev!",
-				"description": "I create stylish and epic games, websites and applications for mobile devices.",
+				"description": "I like to create stylish and epic games, websites and apps for mobile devices.",
 				"see_projects": "See Projects",
 				"learn_more": "Learn More"
 			},
@@ -98,6 +99,7 @@
 				"safety": "Your Safety",
 				"social": "Social Media",
 				"made": "Site was made in 2023 by using React and Github Pages.",
+				"flaticon": "Icons were made by",
 				
 				"playlist": "My Playlist",
 				"blog": "My Blog"
@@ -113,6 +115,7 @@
 			"policy": {
 				"email": "If you have any questions, please write to this email",
 				"updated": "Last updated",
+
 				"privacy": {
 					"title": "Privacy Policy",
 					"fields": {

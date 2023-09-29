@@ -62,7 +62,7 @@ export default function Footer() {
 				<p style={{marginTop: "2rem", display: "block", opacity: .9, lineHeight: 1.5}}>
 					{t("footer.made")}
 					<span style={{width: ".35rem", display: "inline-block"}}></span>
-					<a href="https://www.flaticon.com" target="_blank">Icons was made by Flaticon.</a>
+					<a href="https://www.flaticon.com" target="_blank">{t("footer.flaticon")} Flaticon.</a>
 				</p>
 			</div>
 		</div>

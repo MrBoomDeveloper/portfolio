@@ -7,11 +7,11 @@ const root = resolve(__dirname, "src");
 const global: UserConfig = {
 	resolve: {
 		alias: {
+			"@src": root,
 			"@assets": resolve(root, "assets"),
 			"@components": resolve(root, "components"),
 			"@routes": resolve(root, "routes"),
-			"@data": resolve(root, "data"),
-			"@": root
+			"@data": resolve(root, "data")
 		},
 		
 		extensions: [".tsx", ".ts", ".json", ".module.scss", ".scss"]

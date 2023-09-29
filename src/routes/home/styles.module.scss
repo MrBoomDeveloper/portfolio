@@ -12,6 +12,7 @@
 	font-family: "Roboto", sans-serif;
 	font-weight: 600;
 	margin-bottom: .8em;
+	
 	@include border(rgba(240, 87, 255, .3), 1px);
 }
 
@@ -66,11 +67,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		max-width: 1000px;
+		max-width: $responsibilityBreakpoint;
 		gap: 1rem;
 		width: 100%;
 		margin-inline: 2rem;
 		text-align: center;
+		padding-top: 2rem;
 		
 		* {
 			animation: fadeIn 1s;
@@ -173,11 +175,7 @@
 	gap: .8rem;
 }
 
-@media(min-width: 1000px) {
-	.hero {
-		height: 75vh;
-	}
-
+@media (orientation: landscape) {
 	.skillsList {
 		gap: 1rem;
 	}
@@ -188,15 +186,23 @@
 		bottom: 0;
 		right: 0;
 	}
+
+	@media (min-width: $responsibilityBreakpoint) {
+		.hero {
+			height: 75vh;
+		}
+	}
 }
 
-@media(max-width: 1000px) {
+@media (max-width: $responsibilityBreakpoint) {
 	.heroContent {
 		padding-inline: 2rem;
 		padding-block: 6rem;
 		min-height: 75vh;
 	}
+}
 
+@media (max-width: $responsibilityBreakpoint) and (orientation: portrait) {
 	.actions {
 		flex-direction: column;
 		gap: .5rem;

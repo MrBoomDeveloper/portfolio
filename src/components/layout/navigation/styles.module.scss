@@ -1,10 +1,12 @@
+@import "@components/variables";
+
 .container {
 	.link {
 		font-family: "Roboto", sans-serif;
 	}
 }
 
-@media(min-width: 1000px) {
+@media(min-width: $responsibilityBreakpoint) {
 	.container {
 		display: flex;
 		align-items: center;
@@ -33,7 +35,7 @@
 	}
 }
 
-@media(max-width: 1000px) {
+@media(max-width: $responsibilityBreakpoint) {
 	.container {
 		z-index: -1;
 		padding-top: 6rem;

@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 
 interface SectionArguments {
-	fill: boolean,
+	fill?: boolean,
 	children: any,
 	style?: any
 }
