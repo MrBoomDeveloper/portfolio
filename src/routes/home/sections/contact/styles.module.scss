@@ -1,0 +1,71 @@
+@import "@components/variables";
+
+.container {
+	display: flex;
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		gap: .6rem;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+
+		& > div:nth-child(3) {
+			height: 6rem;
+		}
+	}
+}
+
+@media (min-width: ($responsibilityBreakpoint - 200)), (orientation: landscape) {
+	.container {
+		gap: 2.5rem;
+
+		.info {
+			width: 14rem;
+
+			& > p {
+				flex-grow: 1;
+			}
+
+			.submit {
+				translate: 0 -.5rem;
+				height: 2.75rem;
+				margin-right: 2rem;
+			}
+		}
+
+		form {
+			flex-grow: 1;
+
+			.submit {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: ($responsibilityBreakpoint - 200)) and (orientation: portrait) {
+	.container {
+		flex-direction: column;
+		gap: 1rem;
+
+		form {
+			& > *:not(:nth-child(4)) {
+				padding-block: .75em;
+			}
+
+			.submit {
+				margin-top: .4rem;
+				width: 12rem;
+			}
+		}
+
+		.info .submit {
+			display: none;
+		}
+	}
+}

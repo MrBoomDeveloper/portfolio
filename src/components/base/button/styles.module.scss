@@ -9,9 +9,14 @@
 	gap: 1.35rem;
 	align-items: center;
 	
-	&:active, &:hover {
+	&:is(:active, :hover):not(.disabled) {
 		opacity: .5;
 		scale: .95;
+	}
+
+	&.disabled {
+		background-color: #bd5dbb;
+		opacity: .75;
 	}
 }
 

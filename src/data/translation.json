@@ -3,6 +3,13 @@
 		"translation": {
 			"no_description": "Описание не было предоставленно.",
 
+			"error": {
+				"invalid_email": "Неправильная Почта!",
+				"short_name": "Слишком короткое Имя!",
+				"short_message": "Сообщение слишком короткое!",
+				"submit_email": "Не удалось отправить письмо!"
+			},
+
 			"home": {
 				"hi": "Привет, я MrBoomDev!",
 				"description": "Мне нравиться создавать стильные и эпичные игры, сайты и приложения для мобильных устройств.",
@@ -21,7 +28,15 @@
 			
 			"contact": {
 				"title": "Связаться со мной",
-				"description": "Есть вопрос? Напиши мне!"
+				"description": "Есть вопрос? Напиши мне!",
+				"submit": "Отправить",
+
+				"email": "Ваша Почта",
+				"name": "Ваше Имя",
+				"message": "Ваше сообщение",
+
+				"loading": "Отправляем...",
+				"sent": "Отправлено успешно!"
 			},
 			
 			"footer": {
@@ -69,6 +84,13 @@
 		"translation": {
 			"no_description": "No description were provided",
 
+			"error": {
+				"invalid_email": "Invalid email!",
+				"short_name": "Name is too short!",
+				"short_message": "Messsage is too short!",
+				"submit_email": "Failed to send an email!"
+			},
+
 			"home": {
 				"hi": "Hey, I'm MrBoomDev!",
 				"description": "I like to create stylish and epic games, websites and apps for mobile devices.",
@@ -91,7 +113,15 @@
 			
 			"contact": {
 				"title": "Contact Me",
-				"description": ""
+				"description": "Have any questions? I'll read it!",
+				"submit": "Submit Email",
+
+				"email": "Your Email",
+				"name": "Your Name",
+				"message": "Your Message",
+
+				"loading": "Loading...",
+				"sent": "Sent successfully!"
 			},
 			
 			"footer": {

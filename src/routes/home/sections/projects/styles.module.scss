@@ -152,7 +152,7 @@
 			flex-grow: 1;
 		}
 
-		@media (max-width: $responsibilityBreakpoint) {
+		@media (max-width: ($responsibilityBreakpoint - 100)) {
 			& > .banner {
 				width: 15rem;
 			}
@@ -167,7 +167,7 @@
 			}
 		}
 
-		@media (min-width: $responsibilityBreakpoint) {
+		@media (min-width: ($responsibilityBreakpoint - 100)) {
 			& > .info {
 				padding-inline: 1.5rem;
 
@@ -186,7 +186,7 @@
 	}
 }
 
-@media (max-width: $responsibilityBreakpoint) and (orientation: portrait) {
+@media (max-width: ($responsibilityBreakpoint - 100)) and (orientation: portrait) {
 	.project {
 		flex-direction: column;
 

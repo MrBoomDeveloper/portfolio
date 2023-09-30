@@ -8,14 +8,6 @@
 		drop-shadow(0 -#{$size} 0 $color);
 }
 
-.sectionTitle {
-	font-family: "Roboto", sans-serif;
-	font-weight: 600;
-	margin-bottom: .8em;
-	
-	@include border(rgba(240, 87, 255, .3), 1px);
-}
-
 .highlight {
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
@@ -72,7 +64,8 @@
 		width: 100%;
 		margin-inline: 2rem;
 		text-align: center;
-		padding-top: 2rem;
+		padding-top: 6rem;
+		padding-bottom: 4rem;
 		
 		* {
 			animation: fadeIn 1s;
@@ -165,21 +158,12 @@
 	}
 }
 
-.skills .sectionTitle {
-	font-weight: 600;
-	display: inline-block;
-}
-
 .actions {
 	display: flex;
 	gap: .8rem;
 }
 
 @media (orientation: landscape) {
-	.skillsList {
-		gap: 1rem;
-	}
-	
 	.freddy {
 		height: 15rem;
 		position: absolute;
@@ -189,7 +173,7 @@
 
 	@media (min-width: $responsibilityBreakpoint) {
 		.hero {
-			height: 75vh;
+			min-height: 75vh;
 		}
 	}
 }
@@ -209,19 +193,6 @@
 
 		& > * > * {
 			width: 10rem;
-		}
-	}
-	
-	.skills {
-		justify-content: center;
-		text-align: center;
-		
-		.sectionTitle {
-			font-size: 2.4em;
-		}
-		
-		.skillsList {
-			gap: .5rem;
 		}
 	}
 	

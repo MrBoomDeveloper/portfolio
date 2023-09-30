@@ -5,9 +5,11 @@ import styles from "./styles.module.scss";
 import { useRef } from "react";
 import Projects from "./sections/projects";
 import SkillsSection from "./sections/skills";
+import ContactSection, { ContactSectionRef } from "./sections/contact";
 
 export default function HomePage() {
 	const projectsSection = useRef<HTMLDivElement>(null);
+	const formSection = useRef<ContactSectionRef>(null);
 	const { t } = useTranslation();
 	
 	return (
@@ -24,14 +26,14 @@ export default function HomePage() {
 						<Button text={t("home.see_projects")} 
 							style={{paddingInline: "2.4rem"}}
 							onPress={() => {
-								const offset = (projectsSection.current?.offsetTop || 0) - 100;
+								const offset = (projectsSection.current?.offsetTop || 0) - 125;
 								window.scrollTo({ top: offset, behavior: "smooth" })
 							}} />
 
 						<Button text={t("contact.title")} 
 							style={{paddingInline: "2.4rem"}}
 							onPress={() => {
-								const offset = (projectsSection.current?.offsetTop || 0) - 100;
+								const offset = (formSection.current?.getY() || 0) - 150;
 								window.scrollTo({ top: offset, behavior: "smooth" })
 							}} />
 					</div>
@@ -54,19 +56,9 @@ export default function HomePage() {
 				<Aboutme />
 			</Section> */}
 			
-			{/* <Section fill style={{paddingBlock: "3rem"}}>
-				<div>
-					<h1>{t("contact.title")}</h1>
-					<p>{t("contact.description")}</p>
-
-					<form action="https://www.google.com" style={{display: "flex", flexDirection: "column", maxWidth: "500px", gap: ".5rem"}}>
-						<input type="email" placeholder="Email" style={{padding: ".5em", color: "black"}} />
-						<input type="text" placeholder="Your Name" style={{padding: ".5em", color: "black"}} />
-						<textarea placeholder="Your Message..." style={{padding: ".5em", color: "black", height: "5rem"}} />
-						<Button text="Submit" />
-					</form>
-				</div>
-			</Section> */}
+			<Section fill style={{paddingBlock: "3rem"}}>
+				<ContactSection reference={formSection} />
+			</Section>
 		</>
 	);
 }

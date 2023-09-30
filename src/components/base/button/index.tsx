@@ -1,17 +1,32 @@
 import { CSSProperties } from "react";
-import styles from "./styles.module.scss";
+import styles from "./styles.module.scss"; 
 
-interface ButtonArguments {
+export default function Button({
+	text,
+	style, 
+	onPress, 
+	icon,
+	iconStyle,
+	className,
+	enabled = true
+}: {
 	text: string,
 	style?: CSSProperties,
 	icon?: string,
+	className?: string,
 	iconStyle?: CSSProperties,
-	onPress?: () => void
-}
-
-export default function Button({text, style, onPress, icon, iconStyle}: ButtonArguments) {
+	onPress?: () => void,
+	enabled?: boolean
+}) {
 	return (
-		<div className={styles.container} style={style} onClick={onPress}>
+		<div className={`${styles.container} ${className} ${enabled ? styles.enabled : styles.disabled}`} 
+			style={style} 
+			onClick={() => {
+				if(!enabled) return;
+
+				onPress?.();
+			}}>
+				
 			<span className={styles.label}>{text}</span>
 			{icon && <img src={icon} className={styles.icon} style={iconStyle} />}
 		</div>

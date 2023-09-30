@@ -1,0 +1,51 @@
+.container {
+	padding: .6em;
+	border: rgba(168, 129, 165, 0.25) solid 1px;
+	border-radius: 5px;
+	transition: .15s;
+	background-color: rgba(85, 78, 114, 0.1);
+	position: relative;
+
+	&:focus-within {
+		border-color: rgb(190, 165, 190);
+	}
+
+	& > textarea {
+		resize: none;
+		height: 100%;
+	}
+
+	&.isError {
+		border-color: red;
+	}
+}
+
+.input {
+	color: white;
+	background-color: transparent;
+	border: none;
+	width: 100%;
+
+	&::placeholder {
+		color: rgb(184, 149, 180);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.error {
+	padding: .45rem .75rem;
+	color: white;
+	background-color: rgb(233, 44, 44);
+	position: absolute;
+	bottom: -2.1rem;
+	left: .1rem;
+	z-index: 999;
+	border-radius: 5px;
+
+	&:empty {
+		padding: 0;
+	}
+}

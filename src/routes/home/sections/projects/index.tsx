@@ -21,8 +21,8 @@ function Projects() {
 				description="The most Customizable mobile Web Browser!"
 				link="https://github.com/MrBoomDeveloper/Scrollix" />
 
-			<Project title="Skayrix"
-				tags={["libgdx", "android", "java"]} />
+			{/* <Project title="Skayrix"
+				tags={["libgdx", "android", "java"]} /> */}
 
 			{/* <Project title="BoomStudio" invert
 				tags={["Android"]} /> */}
