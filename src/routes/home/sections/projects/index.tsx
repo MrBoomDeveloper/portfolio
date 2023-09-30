@@ -8,7 +8,7 @@ function Projects() {
 	const { t } = useTranslation();
 
 	return (
-		<div className={styles.projects}>
+		<div className={styles.projects} id="projects">
 			<h1 style={{marginBottom: "1rem"}}>{t("projects.title")}</h1>
 
 			<Project title="Binacty Engine" banner="/banner/binacty.jpg"

@@ -2,16 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
 
-interface HeaderArguments {
-	children?: any
-}
-
-export default function Header({children}: HeaderArguments) {
+export default function Header({children}: {children?: JSX.Element | JSX.Element[]}) {
 	const [isScrolled, setIsScrolled] = useState(false);
 	
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			const newIsScrolled = window.pageYOffset > 50;
+			const newIsScrolled = window.scrollY > 50;
 			setIsScrolled(newIsScrolled);
 		});
 	}, []);
@@ -22,6 +18,7 @@ export default function Header({children}: HeaderArguments) {
 				<Link to="/">
 					<h1 className={styles.logo}>MrBoomDev</h1>
 				</Link>
+				
 				<span style={{flexGrow: 1}} />
 				{children}
 			</div>

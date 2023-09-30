@@ -1,4 +1,4 @@
-export type Tag = "android" | "rn" | "libgdx" | "java" | "react" | "typescript";
+export type Tag = "android" | "rn" | "libgdx" | "java" | "react" | "typescript" | "sass" | "webpack";
 
 const names: Partial<Record<Tag, string>> = {
 	android: "Android",

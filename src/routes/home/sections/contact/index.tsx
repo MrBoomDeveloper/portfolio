@@ -86,7 +86,7 @@ export default function ContactSection({
 			onPress={() => submit()} />);
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} id="contact">
 			<div className={styles.info}>
 				<h1>{t("contact.title")}</h1>
 				<p>{t("contact.description")}</p>

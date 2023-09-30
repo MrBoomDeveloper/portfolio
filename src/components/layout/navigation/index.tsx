@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import { useTranslation } from "react-i18next";
 import { general } from "@data/header.json";
 import styles from "./styles.module.scss";
-
-interface NavigationArguments {
-	isActive: boolean
-}
 
 interface NavigationItem {
 	link: string,
@@ -13,7 +10,20 @@ interface NavigationItem {
 	key: string
 }
 
-export default function Navigation({isActive}: NavigationArguments) {
+const scrollWithOffset = (element: HTMLElement) => {
+    const yCoordinate = element.getBoundingClientRect().top + window.scrollY;
+    const yOffset = -150; 
+
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+}
+
+export default function Navigation({
+	isActive,
+	onToggle
+}: {
+	isActive: boolean,
+	onToggle?: (isToggled: boolean) => void
+}) {
 	const { t } = useTranslation();
 	
 	return (
@@ -21,9 +31,14 @@ export default function Navigation({isActive}: NavigationArguments) {
 			<div className={styles.content}>
 				{general.map(({link, title, key}: NavigationItem) => {
 					return (
-						<Link to={link} className={styles.link} key={key}>
+						<HashLink to={link} 
+							scroll={el => scrollWithOffset(el)}
+							className={styles.link}
+							onClick={() => onToggle?.(false)} 
+							key={key}>
+
 							<p>{t(title)}</p>
-						</Link>
+						</HashLink>
 					);
 				})}
 			</div>
