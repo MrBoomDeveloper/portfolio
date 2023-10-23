@@ -23,9 +23,26 @@
 .items {
 	display: flex;
 	gap: 1.6rem;
+	flex-wrap: wrap;
+}
+
+@media (min-width: ($responsibilityBreakpoint - 100)), (orientation: horizontal) {
+	.mobileSeparator {
+		display: none;
+	}
 }
 
 @media (max-width: $responsibilityBreakpoint) and (orientation: portrait) {
+	.header {
+		display: flex;
+		align-items: center;
+
+		h1 {
+			flex-shrink: 0;
+			margin-inline: 1em;
+		}
+	}
+
 	.separator {
 		display: none;
 	}

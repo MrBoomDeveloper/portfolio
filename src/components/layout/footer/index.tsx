@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { groups, social } from "@data/footer.json";
 import styles from "./styles.module.scss";
+import Separator from "@components/base/separator";
+import { scrollWithOffset } from "../navigation";
 
 interface FooterGroup {
 	title: string,
@@ -48,7 +50,13 @@ export default function Footer() {
 									const text = <p className={styles.link}>{t(title)}</p>;
 									
 									if(!external) {
-										return <Link to={link} key={key}>{text}</Link>;
+										return <Link to={link} key={key} onClick={() => {
+											window.scrollTo({
+												top: 0,
+												left: 0,
+												behavior: "smooth"
+											});
+										}}>{text}</Link>;
 									} else {
 										return <a href={link} target="_blank" key={key}>{text}</a>;
 									}
@@ -58,9 +66,11 @@ export default function Footer() {
 					})}
 				</div>
 				
-				<div className={styles.separator}></div>
+				<Separator />
+
 				<p style={{marginTop: "2rem", display: "block", opacity: .9, lineHeight: 1.5}}>
 					{t("footer.made")}
+
 					<span style={{width: ".35rem", display: "inline-block"}}></span>
 					<a href="https://www.flaticon.com" target="_blank">{t("footer.flaticon")} Flaticon.</a>
 				</p>

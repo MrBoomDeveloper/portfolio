@@ -4,6 +4,7 @@ import Button from "@components/base/button";
 import { RefObject, useCallback, useRef, useState } from "react";
 import Input from "@components/base/input";
 import { emailRegex } from "@data/marks";
+import Separator from "@components/base/separator";
 
 export interface ContactSectionRef {
 	getY: () => number
@@ -88,7 +89,12 @@ export default function ContactSection({
 	return (
 		<div className={styles.container} id="contact">
 			<div className={styles.info}>
-				<h1>{t("contact.title")}</h1>
+				<div style={{display: "flex", alignItems: "center"}}>
+					<h1 style={{flexShrink: 0, marginRight: "1em"}}>{t("contact.title")}</h1>
+
+					<Separator className={styles.mobileSeparator} />
+				</div>
+				
 				<p>{t("contact.description")}</p>
 
 				{submitButton}

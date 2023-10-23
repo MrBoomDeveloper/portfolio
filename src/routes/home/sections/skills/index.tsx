@@ -1,15 +1,22 @@
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
 import { Tag } from "@data/marks";
+import Separator from "@components/base/separator";
 
-const skills: Tag[] = ["react", "sass", "typescript", "webpack", "libgdx", "android", "java"];
+const skills: Tag[] = ["react", "sass", "typescript", "webpack", "libgdx", "android", "java"/*, "express"*/];
 
 export default function SkillsSection() {
 	const { t } = useTranslation();
 
 	return (
 		<div className={styles.row} id="skills">
-			<h1>{t("skills.title")}</h1>
+			<div className={styles.header}>
+				<Separator className={styles.mobileSeparator} />
+
+				<h1>{t("skills.title")}</h1>
+
+				<Separator className={styles.mobileSeparator} />
+			</div>
 
 			<div className={styles.separator}></div>
 

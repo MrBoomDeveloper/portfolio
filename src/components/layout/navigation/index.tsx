@@ -10,7 +10,7 @@ interface NavigationItem {
 	key: string
 }
 
-const scrollWithOffset = (element: HTMLElement) => {
+export const scrollWithOffset = (element: HTMLElement) => {
     const yCoordinate = element.getBoundingClientRect().top + window.scrollY;
     const yOffset = -150; 
 

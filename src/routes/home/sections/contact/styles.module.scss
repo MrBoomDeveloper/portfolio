@@ -21,6 +21,10 @@
 }
 
 @media (min-width: ($responsibilityBreakpoint - 200)), (orientation: landscape) {
+	.mobileSeparator {
+		display: none;
+	}
+
 	.container {
 		gap: 2.5rem;
 
@@ -54,12 +58,14 @@
 		gap: 1rem;
 
 		form {
+			margin-top: .4rem;
+
 			& > *:not(:nth-child(4)) {
 				padding-block: .75em;
 			}
 
 			.submit {
-				margin-top: .4rem;
+				margin-top: .5rem;
 				width: 12rem;
 			}
 		}

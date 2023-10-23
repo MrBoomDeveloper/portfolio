@@ -3,13 +3,17 @@ import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
 import { Tag, getTagName } from "@src/data/marks";
+import Separator from "@components/base/separator";
 
 function Projects() {
 	const { t } = useTranslation();
 
 	return (
 		<div className={styles.projects} id="projects">
-			<h1 style={{marginBottom: "1rem"}}>{t("projects.title")}</h1>
+			<div style={{marginBottom: "1rem", display: "flex"}}>
+				<h1 style={{flexShrink: 0, marginRight: "1em"}}>{t("projects.title")}</h1>
+				<Separator style={{alignSelf: "center"}} />
+			</div>
 
 			<Project title="Binacty Engine" banner="/banner/binacty.jpg"
 				tags={["rn", "libgdx", "android"]}

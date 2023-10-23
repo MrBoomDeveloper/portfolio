@@ -9,6 +9,9 @@
 				}, { 
 					"title": "footer.blog", "key": "blog",
 					"external": true, "link": "https://mrboomdev.bearblog.dev/blog" 
+				}, {
+					"title": "Archive", "key": "webpack",
+					"external": true, "link": "https://mrboomdeveloper.github.io/archive/projects" 
 				}
 			]
 		}, {
@@ -20,17 +23,6 @@
 				}, { 
 					"title": "policy.terms.title", "key": "terms",
 					"link": "terms" 
-				}
-			]
-		}, {
-			"title": "Archive", "key": "archive",
-			"data": [
-				{ 
-					"title": "Webpack version of this site", "key": "webpack",
-					"external": true, "link": "https://github.com/MrBoomDeveloper/OldPortfolio" 
-				}, { 
-					"title": "Old Stuff and Projects", "key": "old",
-					"external": true, "link": "https://archive.mrboomdev.ru" 
 				}
 			]
 		}
