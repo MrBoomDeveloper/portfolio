@@ -9,7 +9,7 @@ import ContactSection, { ContactSectionRef } from "./sections/contact";
 
 export default function HomePage() {
 	const projectsSection = useRef<HTMLDivElement>(null);
-	const formSection = useRef<ContactSectionRef>(null);
+	const formSection = useRef<HTMLDivElement>(null);
 	const { t } = useTranslation();
 	const [offset, setOffset] = useState(0);
 
@@ -35,7 +35,10 @@ export default function HomePage() {
 					
 					<div className={styles.actions}>
 						<Button text={t("home.see_projects")} 
+							className={styles.mainAction}
 							style={{paddingInline: "2.4rem"}}
+							icon="icon/expand.svg"
+							iconStyle={{rotate: "-90deg"}}
 							onPress={() => {
 								const offset = (projectsSection.current?.offsetTop || 0) - 125;
 								window.scrollTo({ top: offset, behavior: "smooth" })
@@ -43,8 +46,9 @@ export default function HomePage() {
 
 						<Button text={t("contact.title")} 
 							style={{paddingInline: "2.4rem"}}
+							className={styles.secondaryAction}
 							onPress={() => {
-								const offset = (formSection.current?.getY() || 0) - 150;
+								const offset = (formSection.current?.offsetTop || 0) - 150;
 								window.scrollTo({ top: offset, behavior: "smooth" })
 							}} />
 					</div>
@@ -67,8 +71,10 @@ export default function HomePage() {
 				<Aboutme />
 			</Section> */}
 			
-			<Section fill style={{paddingBlock: "3rem"}}>
-				<ContactSection reference={formSection} />
+			<Section fill>
+				<div style={{paddingBlock: "1rem"}} ref={formSection}>
+					<ContactSection />
+				</div>
 			</Section>
 		</>
 	);

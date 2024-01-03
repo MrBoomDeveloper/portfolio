@@ -1,13 +1,5 @@
 @import "@components/variables";
 
-@mixin border($color, $size) {
-	filter:
-		drop-shadow($size 0 0 $color)
-		drop-shadow(0 $size 0 $color)
-		drop-shadow(-#{$size} 0 0 $color)
-		drop-shadow(0 -#{$size} 0 $color);
-}
-
 .highlight {
 	font-family: $subtitle-font;
 	font-weight: 500;
@@ -165,16 +157,17 @@
 .actions {
 	display: flex;
 	gap: .8rem;
+
+	> .mainAction {
+		background-color: #e35cf0;
+	}
+
+	> .secondaryAction {
+		background-color: rgb(216, 94, 247);
+	}
 }
 
 @media (orientation: landscape) {
-	.freddy {
-		height: 15rem;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
-
 	@media (min-width: $responsibilityBreakpoint) {
 		.hero {
 			min-height: 75vh;
@@ -198,12 +191,5 @@
 		& > * > * {
 			width: 10rem;
 		}
-	}
-	
-	.freddy {
-		position: absolute;
-		height: 100%;
-		opacity: .25;
-		z-index: -1;
 	}
 }

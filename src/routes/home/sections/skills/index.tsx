@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { Tag } from "@data/marks";
 import Separator from "@components/base/separator";
 
-const skills: Tag[] = ["react", "sass", "typescript", "webpack", "libgdx", "android", "java"/*, "express"*/];
+const skills: Tag[] = ["react", "typescript", "sass", "mysql", "webpack", "libgdx", "android", "java"/*, "express"*/];
 
 export default function SkillsSection() {
 	const { t } = useTranslation();

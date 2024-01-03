@@ -6,12 +6,13 @@
 }
 
 .desktopSeparator {
-	height: 2rem !important;
+	height: 2.25rem !important;
 	align-self: center;
 }
 
 .title {
 	font-family: $description-font;
+	width: max-content;
 }
 
 .skill {

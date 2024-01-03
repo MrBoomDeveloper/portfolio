@@ -1,10 +1,11 @@
-export type Tag = "android" | "rn" | "libgdx" | "java" | "react" | "typescript" | "sass" | "webpack" | "express";
+export type Tag = "android" | "rn" | "libgdx" | "java" | "react" | "typescript" | "sass" | "webpack" | "express" | "mysql";
 
 const names: Partial<Record<Tag, string>> = {
 	android: "Android",
 	rn: "React Native",
 	libgdx: "LibGDX",
-	java: "Java"
+	java: "Java",
+	mysql: "MySQL"
 }
 
 export function getTagName(id: Tag) {

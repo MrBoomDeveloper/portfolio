@@ -23,12 +23,13 @@ export default function Button({
 			style={style} 
 			onClick={() => {
 				if(!enabled) return;
-
 				onPress?.();
 			}}>
-				
-			<span className={styles.label}>{text}</span>
-			{icon && <img src={icon} className={styles.icon} style={iconStyle} />}
+			
+			<div className={styles.content}>
+				<span className={styles.label}>{text}</span>
+				{icon && <img src={icon} className={styles.icon} style={iconStyle} />}
+			</div>
 		</div>
 	);
 }
