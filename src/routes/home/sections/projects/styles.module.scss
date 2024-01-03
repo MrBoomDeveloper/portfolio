@@ -6,6 +6,12 @@
 	gap: .6rem;
 }
 
+.title {
+	flex-shrink: 0;
+	margin-right: 1em;
+	font-family: $description-font;
+}
+
 .tags {
 	margin-top: -.1rem;
 	display: flex;

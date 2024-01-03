@@ -23,9 +23,11 @@ export default function Root({children}: RootArguments) {
 				<Navigation isActive={isNavShown} 
 					onToggle={isToggled => setNavVisibility(isToggled)} />
 			</Header>
-
+			
 			<Outlet />
+
 			{children}
+
 			<Footer />
 		</div>
 	);

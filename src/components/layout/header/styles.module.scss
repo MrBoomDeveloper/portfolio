@@ -3,8 +3,9 @@
 .logo {
 	color: #F057FF;
 	text-shadow: 0 0 1px #F057FF;
-	font-family: "Roboto", sans-serif;
+	font-family: $button-font;
 	font-weight: 500;
+	text-shadow: #F057FF 0 0 2px;
 	transition: .2s;
 	
 	&:hover {

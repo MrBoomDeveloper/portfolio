@@ -1,5 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+@font-face {
+	src: url("font/Geist-Regular.otf"), url("font/Geist-Regular.woff2");
+	font-family: "GeistRegular";
+}
+
+@font-face {
+	src: url("font/Geist-Bold.otf"), url("font/Geist-Bold.woff2");
+	font-family: "GeistBold";
+}
+
+@font-face {
+	src: url("font/Geist-Light.otf"), url("font/Geist-Light.woff2");
+	font-family: "GeistLight";
+}
+
+@font-face {
+	src: url("font/Geist-Medium.otf"), url("font/Geist-Medium.woff2");
+	font-family: "GeistMedium";
+}
+
+@mixin desktop {
+	@media (min-width: ($responsibilityBreakpoint - 200)), (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: ($responsibilityBreakpoint - 200)) and (orientation: portrait) {
+		@content;
+	}
+}
+
+$subtitle-font: "GeistRegular", sans-serif;
+$title-font: "GeistBold", sans-serif;
+$description-font: "GeistRegular", sans-serif;
+$button-font: "GeistMedium", sans-serif;
+
+$description-color: #eedefa;
+
 $primary: #da33ff;
 $primarySurface: hsl(290, 100%, 55%);
 $light: #F474FF;

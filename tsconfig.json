@@ -7,7 +7,6 @@
 		"skipLibCheck": true,
 		"esModuleInterop": false,
 		"allowSyntheticDefaultImports": true,
-		"strict": true,
 		"forceConsistentCasingInFileNames": false,
 		"module": "ESNext",
 		"moduleResolution": "Node",
@@ -15,14 +14,14 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
-		"baseUrl": ".",
 
 		"paths": {
-			"@components/*": ["src/components/*"],
-			"@assets/*": ["src/assets/*"],
-			"@routes.*": ["src/routes/*"],
-			"@data/*": ["src/data/*"],
-      		"@src/*": ["src/*"]
+			"@components/*": ["./src/components/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@routes.*": ["./src/routes/*"],
+			"@data/*": ["./src/data/*"],
+      		"@src/*": ["./src/*"],
+			"@public/*": ["./public/*"]
 		}
 	},
 

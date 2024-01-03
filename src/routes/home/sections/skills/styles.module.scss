@@ -5,13 +5,13 @@
 	gap: 1.4rem;
 }
 
-.separator {
-	display: block;
-	background-color: rgba(148, 148, 148, 0.25);
-	width: 2px;
-	border-radius: 2px;
-	height: 2rem;
+.desktopSeparator {
+	height: 2rem !important;
 	align-self: center;
+}
+
+.title {
+	font-family: $description-font;
 }
 
 .skill {
@@ -33,6 +33,10 @@
 }
 
 @media (max-width: $responsibilityBreakpoint) and (orientation: portrait) {
+	.desktopSeparator {
+		display: none;
+	}
+
 	.header {
 		display: flex;
 		align-items: center;

@@ -1,5 +1,9 @@
 @import "@components/variables";
 
+.title {
+	font-family: $button-font;
+}
+
 .container {
 	padding-block: 4rem;
 	background-color: rgba(0, 0, 0, .3);
@@ -28,6 +32,7 @@
 
 .link {
 	line-height: 1.6;
+	font-family: $description-font;
 	transition: .1s;
 	
 	&:hover {
@@ -60,4 +65,12 @@
 		opacity: .8;
 		scale: .95;
 	}
+}
+
+.copyright {
+	margin-top: 2rem;
+	display: block;
+	opacity: .9;
+	line-height: 1.75;
+	font-family: $description-font;
 }

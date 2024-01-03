@@ -25,24 +25,28 @@ export default function Input({
 	const isError = (error?.length != 0);
 
 	return (
-		<div className={`${styles.container} ${isError ? styles.isError : styles.noError}`}>
-			{multiline ? (
-				<textarea name={name}
-					className={styles.input}
-					onChange={() => onChange?.(textareaRef?.current?.value || "")}
-					ref={textareaRef}
-					placeholder={placeholder}>{value}</textarea>
-			) : (
-				<input placeholder={placeholder}
-					className={styles.input}
-					ref={inputRef}
-					onChange={() => onChange?.(inputRef?.current?.value || "")}
-					name={name}
-					type={type}
-					value={value} />
-			)}
+		<div className={`${styles.holder} ${isError ? styles.isError : styles.noError}`}>
+			<div className={styles.container}>
+				{multiline ? (
+					<textarea name={name}
+						className={styles.input}
+						onChange={() => onChange?.(textareaRef?.current?.value || "")}
+						ref={textareaRef}
+						placeholder={placeholder}>{value}</textarea>
+				) : (
+					<input placeholder={placeholder}
+						className={styles.input}
+						ref={inputRef}
+						onChange={() => onChange?.(inputRef?.current?.value || "")}
+						name={name}
+						type={type}
+						value={value} />
+				)}
 
-			<span className={styles.error}>{error}</span>
+				<span className={styles.error}>{error}</span>
+			</div>
+
+			<div className={styles.caret} />
 		</div>
 	);
 }

@@ -25,7 +25,8 @@ export default function Footer() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
-				<h2>{t("footer.social")}</h2>
+				<h2 className={styles.title}>{t("footer.social")}</h2>
+
 				<div className={styles.social}>
 					{social.map(({link, title, icon, key}: FooterItem) => {
 						return (
@@ -45,7 +46,8 @@ export default function Footer() {
 					{groups.map(({title, data, key}: FooterGroup) => {
 						return (
 							<div className={styles.group} key={key}>
-								<h2>{t(title)}</h2>
+								<h2 className={styles.title}>{t(title)}</h2>
+
 								{data.map(({title, external, link, key}: FooterItem) => {
 									const text = <p className={styles.link}>{t(title)}</p>;
 									
@@ -68,7 +70,7 @@ export default function Footer() {
 				
 				<Separator />
 
-				<p style={{marginTop: "2rem", display: "block", opacity: .9, lineHeight: 1.5}}>
+				<p className={styles.copyright}>
 					{t("footer.made")}
 
 					<span style={{width: ".35rem", display: "inline-block"}}></span>

@@ -11,7 +11,7 @@ function Projects() {
 	return (
 		<div className={styles.projects} id="projects">
 			<div style={{marginBottom: "1rem", display: "flex"}}>
-				<h1 style={{flexShrink: 0, marginRight: "1em"}}>{t("projects.title")}</h1>
+				<h1 className={styles.title}>{t("projects.title")}</h1>
 				<Separator style={{alignSelf: "center"}} />
 			</div>
 

@@ -13,12 +13,12 @@ export default function SkillsSection() {
 			<div className={styles.header}>
 				<Separator className={styles.mobileSeparator} />
 
-				<h1>{t("skills.title")}</h1>
+				<h1 className={styles.title}>{t("skills.title")}</h1>
 
 				<Separator className={styles.mobileSeparator} />
 			</div>
 
-			<div className={styles.separator}></div>
+			<Separator className={styles.desktopSeparator} horizontal={false} />
 
 			<div className={styles.items}>
 				{skills.map(skill => {

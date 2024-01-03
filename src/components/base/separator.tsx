@@ -2,7 +2,7 @@ import { CSSProperties, memo } from "react"
 
 function Separator({
 	horizontal = true,
-	color = "rgba(250, 250, 250, .25)",
+	color = "rgba(69, 48, 74, .5)",
 	className,
 	style
 }: {

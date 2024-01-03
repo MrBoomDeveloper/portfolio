@@ -4,14 +4,14 @@
 	background-color: #f05bed;
 	padding: .8rem 1.4rem;
 	border-radius: 5px;
-	transition: .1s;
+	transition: .15s;
 	display: flex;
 	gap: 1.35rem;
 	align-items: center;
 	
 	&:is(:active, :hover):not(.disabled) {
 		opacity: .5;
-		scale: .95;
+		scale: .975;
 	}
 
 	&.disabled {
@@ -23,7 +23,7 @@
 .label {
 	color: black;
 	font-size: 1.1em;
-	font-family: "Roboto", sans-serif;
+	font-family: $button-font;
 	font-weight: 500;
 }
 
@@ -33,4 +33,10 @@
 	vertical-align: middle;
 	object-fit: cover;
 	margin: -1rem;
+}
+
+@include mobile {
+	.container {
+		padding-block: .85rem;
+	}
 }

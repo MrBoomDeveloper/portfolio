@@ -9,23 +9,27 @@
 }
 
 .highlight {
-	font-family: "Roboto", sans-serif;
+	font-family: $subtitle-font;
 	font-weight: 500;
 	font-size: 1.3em;
 	color: #DA30FF;
+	text-shadow: #DA30FF 0 0 1px;
 }
 
 .title {
 	font-size: 3em;
-	font-family: "Roboto", sans-serif;
+	font-family: $title-font;
 	font-weight: 700;
+	text-shadow: rgba(200, 200, 200, .5) 0 0 2px;
 }
 
 .description {
 	font-size: 1.2em;
 	line-height: 1.6;
 	max-width: 550px;
-	font-family: "Roboto", sans-serif;
+	font-family: $description-font;
+	text-shadow: rgba(200, 200, 200, .25) 0 0 2px;
+	color: $description-color;
 	font-weight: 400;
 	margin-bottom: .6rem;
 }

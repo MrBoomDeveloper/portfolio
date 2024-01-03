@@ -28,7 +28,7 @@ export default function HomePage() {
 			<div className={styles.hero} id="hero">
 				<BackgroundAnimation />
 				
-				<div className={styles.heroContent} style={{translate: `0 ${offset / 5}px`, opacity: ((screen.height - offset * 1.5) / screen.height)}}>
+				<div className={styles.heroContent} style={{translate: `0 ${offset / 5}px`, opacity: ((screen.height - (offset * 1.25)) / screen.height)}}>
 					<p className={styles.highlight}>Frontend Developer</p>
 					<h1 className={styles.title}>{t("home.hi")}</h1>
 					<p className={styles.description}>{t("home.description")}</p>

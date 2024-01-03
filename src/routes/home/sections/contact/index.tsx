@@ -89,13 +89,13 @@ export default function ContactSection({
 	return (
 		<div className={styles.container} id="contact">
 			<div className={styles.info}>
-				<div style={{display: "flex", alignItems: "center"}}>
-					<h1 style={{flexShrink: 0, marginRight: "1em"}}>{t("contact.title")}</h1>
+				<div className={styles.header}>
+					<h1 className={styles.title}>{t("contact.title")}</h1>
 
 					<Separator className={styles.mobileSeparator} />
 				</div>
 				
-				<p>{t("contact.description")}</p>
+				<p className={styles.description}>{t("contact.description")}</p>
 
 				{submitButton}
 			</div>
