@@ -70,6 +70,7 @@
 
 @include mobile {
 	.container {
+		padding-inline: $mobilePadding;
 		flex-direction: column;
 		gap: 1rem;
 

@@ -21,8 +21,13 @@ export default function PolicyPage({data: {data, title, lastUpdated}}: PageArgum
 					<span className={styles.date}>{t("policy.updated")}: <br />{lastUpdated}</span>
 				</div>
 				<div className={styles.fields}>
-					{data.map(item => {
-						return <p className={styles.field}><Dot />{t(item)}</p>;
+					{data.map((item, index) => {
+						return (
+							<p className={styles.field} key={index}>
+								<Dot />
+								{t(item)}
+							</p>
+						);
 					})}
 					
 					<p style={{marginTop: "1rem"}} className={styles.field}>{t("policy.email")}:

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { groups, social } from "@data/footer.json";
 import styles from "./styles.module.scss";
 import Separator from "@components/base/separator";
-import { scrollWithOffset } from "../navigation";
+import { scrollToTop } from "@src/util/navigation";
 
 interface FooterGroup {
 	title: string,
@@ -16,7 +16,28 @@ interface FooterItem {
 	link: string,
 	key: string,
 	icon?: string,
-	external?: boolean
+	isExternal?: boolean
+}
+
+function Item({ item: { link, title, icon, key, isExternal } }: { item: FooterItem }) {
+	const { t } = useTranslation();
+	let element: JSX.Element;
+
+	element = (icon != null)
+		? (
+			<div className={styles.iconHolder}>
+				<img className={styles.icon} src={icon}
+					alt={t(title)} title={t(title)} />
+			</div>
+		) : (
+			<p className={styles.link}>
+				{t(title)}
+			</p>
+		);
+
+	return isExternal
+		? (<a href={link} target="_blank" key={key}>{element}</a>)
+		: (<Link to={link} key={key} onClick={scrollToTop}>{element}</Link>);
 }
 
 export default function Footer() {
@@ -28,18 +49,7 @@ export default function Footer() {
 				<h2 className={styles.title}>{t("footer.social")}</h2>
 
 				<div className={styles.social}>
-					{social.map(({link, title, icon, key}: FooterItem) => {
-						return (
-							<a href={link} target="_blank" key={key}>
-								<div className={styles.iconHolder}>
-									<img className={styles.icon}
-										src={icon}
-										alt={t(title) || "Failed to load"}
-										title={t(title) || "Failed to load"} />
-								</div>
-							</a>
-						);
-					})}
+					{social.map((item: FooterItem) => <Item item={item} key={item.key} />)}
 				</div>
 				
 				<div className={styles.groups}>
@@ -47,22 +57,7 @@ export default function Footer() {
 						return (
 							<div className={styles.group} key={key}>
 								<h2 className={styles.title}>{t(title)}</h2>
-
-								{data.map(({title, external, link, key}: FooterItem) => {
-									const text = <p className={styles.link}>{t(title)}</p>;
-									
-									if(!external) {
-										return <Link to={link} key={key} onClick={() => {
-											window.scrollTo({
-												top: 0,
-												left: 0,
-												behavior: "smooth"
-											});
-										}}>{text}</Link>;
-									} else {
-										return <a href={link} target="_blank" key={key}>{text}</a>;
-									}
-								})}
+								{data.map((item: FooterItem) => <Item item={item} key={item.key} />)}
 							</div>
 						);
 					})}

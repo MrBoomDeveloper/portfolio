@@ -61,7 +61,7 @@ function Project({title, description, banner, invert, link, tags}: ProjectProps)
 				{tags && <div className={styles.projectTags}>
 					{tags.map(tag => {
 						return (
-							<div>
+							<div key={tag}>
 								<span>{getTagName(tag)}</span>
 							</div>
 						);

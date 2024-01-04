@@ -1,14 +1,26 @@
-import { memo } from "react"
-import { useTranslation } from "react-i18next";
+import { memo } from "react";
+import styles from "./styles.module.scss";
 
-function AboutMe() {
-	const { t } = useTranslation();
+interface AboutMeProps {
+	title: string,
+	description: string,
+	banner: string,
+	invert?: boolean
+}
 
+function AboutMe({title, description, banner, invert}: AboutMeProps) {
 	return (
-		<div>
-			<h1>{t("about_me.title")}</h1>
+		<div className={styles.section + ` ${invert ? styles.invert : ""}`}>
+			<div className={styles.info}>
+				<h1 className={styles.infoTitle}>{title}</h1>
+				<p  className={styles.infoDescription}>{description}</p>
+			</div>
+
+			<div className={styles.banner}>
+				<img src={banner} />
+			</div>
 		</div>
-	)
+	);
 }
 
 export default memo(AboutMe);

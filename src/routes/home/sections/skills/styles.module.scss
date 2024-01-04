@@ -6,12 +6,12 @@
 }
 
 .desktopSeparator {
+	margin-block: .125rem;
 	height: 2.25rem !important;
-	align-self: center;
 }
 
 .title {
-	font-family: $description-font;
+	font-family: $button-font;
 	width: max-content;
 }
 
@@ -27,13 +27,13 @@
 	flex-wrap: wrap;
 }
 
-@media (min-width: ($responsibilityBreakpoint - 100)), (orientation: horizontal) {
+@include desktop {
 	.mobileSeparator {
 		display: none;
 	}
 }
 
-@media (max-width: $responsibilityBreakpoint) and (orientation: portrait) {
+@include mobile {
 	.desktopSeparator {
 		display: none;
 	}
@@ -53,6 +53,7 @@
 	}
 
 	.row {
+		padding-inline: $mobilePadding;
 		text-align: center;
 		flex-direction: column;
 		gap: 2rem;

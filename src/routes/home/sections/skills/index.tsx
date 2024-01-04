@@ -25,7 +25,7 @@ export default function SkillsSection() {
 					const path = `/icon/skill/${skill}.png`;
 
 					return (
-						<img className={styles.skill} src={path} />
+						<img className={styles.skill} src={path} key={skill} />
 					);
 				})}
 			</div>

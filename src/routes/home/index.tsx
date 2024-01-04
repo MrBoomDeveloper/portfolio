@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import Button from "@components/base/button";
-import Section from "./sections";
+import Section from "./sections/Section";
 import styles from "./styles.module.scss";
 import { useEffect, useRef, useState } from "react";
 import Projects from "./sections/projects";
 import SkillsSection from "./sections/skills";
 import ContactSection, { ContactSectionRef } from "./sections/contact";
+import AboutMe from "./sections/aboutme";
 
 export default function HomePage() {
 	const projectsSection = useRef<HTMLDivElement>(null);
@@ -62,14 +63,22 @@ export default function HomePage() {
 				<SkillsSection />
 			</Section>
 
+			{/* <Section>
+				<AboutMe invert title="Bruh" 
+					description="lamo." 
+					banner="banner/binacty.jpg" />
+			</Section>
+
+			<Section fill>
+				<AboutMe title="Bruh2" 
+					description="lamo2." 
+					banner="banner/binacty.jpg" />
+			</Section> */}
+
 			<Section>
 				<div ref={projectsSection} />
 				<Projects />
 			</Section>
-
-			{/* <Section fill>
-				<Aboutme />
-			</Section> */}
 			
 			<Section fill>
 				<div style={{paddingBlock: "1rem"}} ref={formSection}>

@@ -1,0 +1,49 @@
+@import "@components/variables";
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: .4rem;
+}
+
+.infoTitle {
+	font-family: $button-font;
+}
+
+.infoDescription {
+	font-family: $description-font;
+	color: $description-color;
+}
+
+.banner > img {
+	width: 100%;
+	object-fit: contain;
+}
+
+@include mobile {
+	.section {
+		padding-inline: $mobilePadding;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1.25rem;
+	}
+}
+
+@include desktop {
+	.section {
+		display: flex;
+		gap: 2rem;
+
+		&.invert {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.info {
+		flex-grow: 1;
+	}
+
+	.banner {
+		width: min(50%, 20rem);
+	}
+}

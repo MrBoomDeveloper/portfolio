@@ -14,7 +14,7 @@
 .sectionTitle {
 	flex-shrink: 0;
 	margin-right: 1em;
-	font-family: $description-font;
+	font-family: $button-font;
 }
 
 .projectBanner {
@@ -104,10 +104,14 @@
 	display: flex;
 	gap: .5rem;
 
-	& > div > span {
-		font-size: .9em;
-		color: rgb(241, 202, 241);
-		font-family: $description-font;
+	& > div {
+		flex-shrink: 0;
+
+		& > span {
+			font-size: .9em;
+			color: rgb(241, 202, 241);
+			font-family: $description-font;
+		}
 	}
 }
 
@@ -145,7 +149,7 @@
 	}
 }
 
-@media (orientation: landscape) {
+@include desktop {
 	.projectBanner {
 		width: 18rem;
 	}
@@ -188,7 +192,11 @@
 	}
 }
 
-@media (max-width: ($responsibilityBreakpoint - 100)) and (orientation: portrait) {
+@include mobile {
+	.section {
+		padding-inline: $mobilePadding;
+	}
+
 	.project {
 		flex-direction: column;
 	}

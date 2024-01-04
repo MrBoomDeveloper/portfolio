@@ -1,20 +1,13 @@
-import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { useTranslation } from "react-i18next";
 import { general } from "@data/header.json";
 import styles from "./styles.module.scss";
+import { scrollWithOffset } from "@src/util/navigation";
 
 interface NavigationItem {
 	link: string,
 	title: string,
 	key: string
-}
-
-export const scrollWithOffset = (element: HTMLElement) => {
-    const yCoordinate = element.getBoundingClientRect().top + window.scrollY;
-    const yOffset = -150; 
-
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
 }
 
 export default function Navigation({
