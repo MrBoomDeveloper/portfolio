@@ -34,7 +34,7 @@ export default function ContactSection({
 		}
 	}
 
-	const submit = useCallback(() => {
+	const submit = useCallback(async () => {
 		if(isSending) return;
 
 		if(!emailRegex.test(email.current?.value || "")) {
@@ -58,30 +58,29 @@ export default function ContactSection({
 		const data = new FormData(formRef.current as HTMLFormElement);
 		data.append("access_key", "2fdf5449-091f-4a24-bbbb-272e9e27d0b3");
 
-		fetch("https://api.web3forms.com/submit", {
-			method: "POST",
-			body: data
-		})
-		.then((response) => response.json())
-		.then((data) => {
-			if(!data.success) {
-				throw new Error("Not successfull." + " " + JSON.stringify(data));
+		try {
+			const response = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				body: data
+			});
+
+			const json = await response.json();
+
+			if(!json.success) {
+				throw new Error("Not successfull." + " " + JSON.stringify(json));
 			}
 
 			alert(t("contact.sent"));
-		})
-		.catch(e => {
+		} catch(e) {
 			alert(t("submit_email") + " " + e);
-		})
-		.finally(() => {
+		} finally {
 			setSending(false);
-		});
+		}
 	}, [formRef, email, name, message, isSending]);
 
 	const submitButton = (
 		<Button text={t(isSending ? "contact.loading" : "contact.submit")}
 			icon="/icon/send.svg"
-			iconStyle={{translate: ".25em 0"}}
 			className={styles.submit}
 			enabled={!isSending}
 			onPress={() => submit()} />);

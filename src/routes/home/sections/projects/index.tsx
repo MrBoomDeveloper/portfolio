@@ -9,9 +9,9 @@ function Projects() {
 	const { t } = useTranslation();
 
 	return (
-		<div className={styles.projects} id="projects">
-			<div style={{marginBottom: "1rem", display: "flex"}}>
-				<h1 className={styles.title}>{t("projects.title")}</h1>
+		<div className={styles.section} id="projects">
+			<div className={styles.sectionHeader}>
+				<h1 className={styles.sectionTitle}>{t("projects.title")}</h1>
 				<Separator style={{alignSelf: "center"}} />
 			</div>
 
@@ -48,17 +48,17 @@ function Project({title, description, banner, invert, link, tags}: ProjectProps)
 
 	const element = (
 		<div className={`${styles.project} ${invert ? styles.projectReverse : ""}`}>
-			{banner && <div className={styles.banner}>
+			{banner && <div className={styles.projectBanner}>
 				<img src={banner} />
 			</div>}
 
-			<div className={styles.info}>
+			<div className={styles.projectInfo}>
 				<div className={styles.projectHeader}>
-					<h3>{title}</h3>
+					<h3 className={styles.projectTitle}>{title}</h3>
 					<span></span>
 				</div>
 				
-				{tags && <div className={styles.tags}>
+				{tags && <div className={styles.projectTags}>
 					{tags.map(tag => {
 						return (
 							<div>
@@ -68,7 +68,7 @@ function Project({title, description, banner, invert, link, tags}: ProjectProps)
 					})}
 				</div>}
 
-				<div className={styles.description}>
+				<div className={styles.projectDescription}>
 					<p>{t(description || "no_description")}</p>
 				</div>
 			</div>

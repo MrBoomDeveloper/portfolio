@@ -8,5 +8,6 @@ export async function resolveProjectAsync(id: string | undefined): Promise<Proje
 		throw new Error("No project was specified");
 	}
 
-	return import(`./${id}.json`);
+	//return import(`./${id}.json`);
+	throw new Error("Stub!");
 }

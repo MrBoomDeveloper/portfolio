@@ -1,5 +1,5 @@
 import { Project, resolveProjectAsync } from "@data/projects";
-import ErrorPage from "@routes/error"; 
+import { ErrorPage } from "@routes"; 
 import { useEffect, useState } from "react";
 import { useHref, useNavigate, useNavigation, useParams } from "react-router-dom";
 
