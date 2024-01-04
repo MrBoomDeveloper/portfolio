@@ -1,6 +1,6 @@
 import { resolve } from "path";
-import { UserConfig, defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
+import { UserConfig, defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 const root = resolve(__dirname, "src");
 
@@ -14,7 +14,7 @@ const global: UserConfig = {
 			"@data": resolve(root, "data")
 		},
 		
-		extensions: [".tsx", ".ts", ".json", ".module.scss", ".scss"]
+		extensions: [".tsx", ".ts", ".json", ".module.scss"]
 	},
 	
 	plugins: [

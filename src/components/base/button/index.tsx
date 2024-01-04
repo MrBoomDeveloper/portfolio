@@ -28,7 +28,11 @@ export default function Button({
 			
 			<div className={styles.content}>
 				<span className={styles.label}>{text}</span>
-				{icon && <img src={icon} className={styles.icon} style={iconStyle} />}
+
+				{icon && (
+					<img className={styles.icon} style={iconStyle}
+						src={icon} alt={text} title={text} />
+				)}
 			</div>
 		</div>
 	);

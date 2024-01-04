@@ -1,21 +1,31 @@
 @font-face {
-	src: url("../../public/font/Geist-Regular.otf"), url("../../public/font/Geist-Regular.woff2");
 	font-family: "GeistRegular";
+	font-style: normal;
+	font-display: swap;
+
+	src: local("sans-serif"), 
+		url("/font/Geist-Regular.otf") format("opentype"), 
+		url("/font/Geist-Regular.woff2") format("woff2");
 }
 
 @font-face {
-	src: url("../../public/font/Geist-Bold.otf"), url("../../public/font/Geist-Bold.woff2");
 	font-family: "GeistBold";
+	font-style: normal;
+	font-display: swap;
+
+	src: local("sans-serif"), 
+		url("/font/Geist-Bold.otf") format("opentype"), 
+		url("/font/Geist-Bold.woff2") format("woff2");
 }
 
-// @font-face {
-// 	src: url("../../public/font/Geist-Light.otf"), url("../../public/font/Geist-Light.woff2");
-// 	font-family: "GeistLight";
-// }
-
 @font-face {
-	src: url("../../public/font/Geist-Medium.otf"), url("../../public/font/Geist-Medium.woff2");
 	font-family: "GeistMedium";
+	font-style: normal;
+	font-display: swap;
+
+	src: local("sans-serif"), 
+		url("/font/Geist-Medium.otf") format("opentype"), 
+		url("/font/Geist-Medium.woff2") format("woff2");
 }
 
 @mixin desktop {

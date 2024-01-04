@@ -49,7 +49,7 @@ function Project({title, description, banner, invert, link, tags}: ProjectProps)
 	const element = (
 		<div className={`${styles.project} ${invert ? styles.projectReverse : ""}`}>
 			{banner && <div className={styles.projectBanner}>
-				<img src={banner} />
+				<img src={banner} title={title} alt={title} />
 			</div>}
 
 			<div className={styles.projectInfo}>

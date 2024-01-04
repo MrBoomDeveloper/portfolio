@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { Tag } from "@data/marks";
 import Separator from "@components/base/separator";
 
-const skills: Tag[] = ["react", "typescript", "sass", "mysql", "webpack", "libgdx", "android", "java"/*, "express"*/];
+const skills = ["React", "TypeScript", "Sass", "MySQL", "Express", "Webpack", "LibGDX", "Android", "Java"];
 
 export default function SkillsSection() {
 	const { t } = useTranslation();
@@ -22,10 +22,11 @@ export default function SkillsSection() {
 
 			<div className={styles.items}>
 				{skills.map(skill => {
-					const path = `/icon/skill/${skill}.png`;
+					const path = `/icon/skill/${skill.toLowerCase()}.png`;
 
 					return (
-						<img className={styles.skill} src={path} key={skill} />
+						<img className={styles.skill} src={path} 
+							key={skill} title={skill} alt={skill} />
 					);
 				})}
 			</div>
