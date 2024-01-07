@@ -1,5 +1,6 @@
 import { RefObject, useRef } from "react";
 import styles from "./styles.module.scss";
+import clsx from "clsx";
 
 export default function Input({
 	placeholder,
@@ -25,7 +26,7 @@ export default function Input({
 	const isError = (error?.length != 0);
 
 	return (
-		<div className={`${styles.holder} ${isError ? styles.isError : styles.noError}`}>
+		<div className={clsx(styles.holder, isError ? styles.isError : styles.noError)}>
 			<div className={styles.container}>
 				{multiline ? (
 					<textarea name={name}

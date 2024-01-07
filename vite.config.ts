@@ -17,9 +17,7 @@ const global: UserConfig = {
 		extensions: [".tsx", ".ts", ".json", ".module.scss"]
 	},
 	
-	plugins: [
-		react()
-	]
+	plugins: [ react() ]
 }
 
 const dev: UserConfig = {

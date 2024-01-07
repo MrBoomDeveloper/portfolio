@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import styles from "./styles.module.scss"; 
+import clsx from "clsx";
 
 export default function Button({
 	text,
@@ -19,7 +20,7 @@ export default function Button({
 	enabled?: boolean
 }) {
 	return (
-		<div className={`${styles.container} ${className} ${enabled ? styles.enabled : styles.disabled}`} 
+		<div className={clsx(styles.container, className, enabled ? styles.enabled : styles.disabled)}
 			style={style} 
 			onClick={() => {
 				if(!enabled) return;

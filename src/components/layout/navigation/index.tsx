@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { general } from "@data/header.json";
 import styles from "./styles.module.scss";
 import { scrollWithOffset } from "@src/util/navigation";
+import clsx from 'clsx';
 
 interface NavigationItem {
 	link: string,
@@ -20,7 +21,7 @@ export default function Navigation({
 	const { t } = useTranslation();
 	
 	return (
-		<div className={`${styles.container} ${isActive && styles.containerActive}`}>
+		<div className={clsx(styles.container, isActive && styles.containerActive)}>
 			<div className={styles.content}>
 				{general.map(({link, title, key}: NavigationItem) => {
 					return (

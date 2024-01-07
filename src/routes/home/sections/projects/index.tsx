@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
 import { Tag, getTagName } from "@src/data/marks";
 import Separator from "@components/base/separator";
+import clsx from "clsx";
 
 function Projects() {
 	const { t } = useTranslation();
@@ -47,7 +48,7 @@ function Project({title, description, banner, invert, link, tags}: ProjectProps)
 	const { t } = useTranslation();
 
 	const element = (
-		<div className={`${styles.project} ${invert ? styles.projectReverse : ""}`}>
+		<div className={clsx(styles.project, invert && styles.projectReverse)}>
 			{banner && <div className={styles.projectBanner}>
 				<img src={banner} title={title} alt={title} />
 			</div>}

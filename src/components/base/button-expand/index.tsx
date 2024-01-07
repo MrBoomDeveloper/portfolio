@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import clsx from "clsx";
 
 export default function ButtonExpand({
 	onClick, 
@@ -13,7 +14,7 @@ export default function ButtonExpand({
 	isActive?: boolean
 }) {
 	return (
-		<div className={`${styles.container} ${isActive && styles.containerActive} ${className}`} 
+		<div className={clsx(styles.container, isActive && styles.containerActive, className)}
 			style={{height: size}} 
 			onClick={() => onClick?.()}>
 
