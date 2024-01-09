@@ -31,23 +31,23 @@
 	"social": [
 		{ 
 			"title": "Disocrd", "key": "discord",
-			"icon": "/icon/discord.svg", 
+			"icon": "/icon/social/discord.svg", 
 			"link": "https://discord.gg/uCUp8TSCvw"
 		}, { 
 			"title": "YouTube", "key": "youtube",
-			"icon": "/icon/youtube.png", 
+			"icon": "/icon/social/youtube.png", 
 			"link": "https://youtube.com/@MrBoomDev" 
 		}, { 
 			"title": "Telegram", "key": "telegram",
-			"icon": "/icon/telegram.png", 
+			"icon": "/icon/social/telegram.png", 
 			"link": "https://t.me/MrBoomBro" 
 		}, { 
 			"title": "VKontakte", "key": "vk",
-			"icon": "/icon/vk.png", 
+			"icon": "/icon/social/vk.png", 
 			"link": "https://vk.com/mrboomdeveloper" 
 		}, { 
 			"title": "GameJolt", "key": "gamejolt",
-			"icon": "/icon/gamejolt.png", 
+			"icon": "/icon/social/gamejolt.png", 
 			"link": "https://gamejolt.com/@MrBoomDev" 
 		}
 	]

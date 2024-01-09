@@ -69,7 +69,7 @@ export default function Footer() {
 					{t("footer.made")}
 
 					<span style={{width: ".35rem", display: "inline-block"}}></span>
-					<a href="https://www.flaticon.com" target="_blank">{t("footer.flaticon")} Flaticon.</a>
+					<a href="https://simpleicons.org/" target="_blank">{t("footer.flaticon")} SimpleIcons.</a>
 				</p>
 			</div>
 		</div>

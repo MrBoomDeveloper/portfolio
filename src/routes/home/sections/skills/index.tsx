@@ -1,9 +1,7 @@
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
-import { Tag } from "@data/marks";
+import { skills } from "@data/marks";
 import Separator from "@components/base/separator";
-
-const skills = ["React", "TypeScript", "Sass", "MySQL", "Express", "Webpack", "LibGDX", "Android", "Java"];
 
 export default function SkillsSection() {
 	const { t } = useTranslation();
@@ -21,12 +19,12 @@ export default function SkillsSection() {
 			<Separator className={styles.desktopSeparator} horizontal={false} />
 
 			<div className={styles.items}>
-				{skills.map(skill => {
-					const path = `/icon/skill/${skill.toLowerCase()}.png`;
+				{Object.entries(skills).map(([id, {label, icon, hide}]) => {
+					if(hide) return null;
 
 					return (
-						<img className={styles.skill} src={path} 
-							key={skill} title={skill} alt={skill} />
+						<img className={styles.skill} src={icon} 
+							key={id} title={label} alt={label} />
 					);
 				})}
 			</div>

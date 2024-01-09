@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Button from "@components/base/button";
 import Section from "./sections/Section";
 import styles from "./styles.module.scss";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import Projects from "./sections/projects";
 import SkillsSection from "./sections/skills";
 import ContactSection, { ContactSectionRef } from "./sections/contact";
@@ -55,8 +55,7 @@ export default function HomePage() {
 					</div>
 				</div>
 
-				<img src="art/foxy.gif" className={styles.heroFoxy}
-					title="Pixel foxy running" alt="Pixel foxy running" />
+				<FoxyAnimation />
 			</div>
 
 			<Section fill>
@@ -88,6 +87,40 @@ export default function HomePage() {
 		</>
 	);
 }
+
+const FoxyAnimation = memo(() => {
+	const image = useRef<HTMLImageElement>(null);
+	const [isCaught, setIsCaught] = useState(false);
+
+	if(isCaught) {
+		return null;
+	}
+
+	return (
+		<img src="art/foxy.gif" className={styles.heroFoxy} ref={image}
+			title="Pixel foxy running" alt="Pixel foxy running"
+			onClick={() => {
+				//TODO: Change to a different image
+
+				image.current.src = "https://media.tenor.com/E5OjPmVF0mgAAAAi/sus-amogus.gif";
+				image.current.classList.add(styles.foxyCaught);
+
+				setTimeout(() => image.current.style
+					.animationPlayState = "paused", 125);
+
+				setTimeout(() => {
+					image.current.classList.add(styles.foxyKilled);
+
+					setTimeout(() => {
+						image.current.style.display = "none";
+						image.current.className = "";
+
+						setIsCaught(true);
+					}, 1_000);
+				}, 500);
+			}} />
+	);
+});
 
 function BackgroundAnimation() {
 	const [offset, setOffset] = useState(0);

@@ -33,20 +33,38 @@
 	overflow: hidden;
 
 	&Foxy {
+		$foxyRunAnimationMultiplier: 3;
+		$foxyHeight: 250px;
+
 		position: absolute;
 		bottom: 0;
-		height: 250px;
-		left: 0;
-		animation: foxyRunningAnimation 10s infinite;
-	}
+		height: $foxyHeight;
+		left: calc(50% - ($foxyHeight /2));
+		transition: .5s;
+		animation: foxyRunningAnimation 4s * $foxyRunAnimationMultiplier infinite ease-in-out;
 
-	@keyframes foxyRunningAnimation {
-		from {
-			translate: -5000px 0;
+		&.foxyCaught {
+			filter: 
+				brightness(250%) 
+				grayscale(250%)
+				saturate(0) 
+				sepia(0%) 
+				saturate(0%) 
+				contrast(250%);
 		}
 
-		to {
-			translate: 5000px 0;
+		&.foxyKilled {
+			opacity: 0;
+		}
+
+		@keyframes foxyRunningAnimation {
+			from {
+				translate: (-100vw * $foxyRunAnimationMultiplier) 0;
+			}
+
+			to {
+				translate: (100vw * $foxyRunAnimationMultiplier) 0;
+			}
 		}
 	}
 	
@@ -167,15 +185,19 @@
 	}
 }
 
-@media (orientation: landscape) {
-	@media (min-width: $responsibilityBreakpoint) {
+@media(orientation: landscape) {
+	@media(min-width: $responsibilityBreakpoint) {
 		.hero {
 			min-height: 75vh;
 		}
 	}
 }
 
-@media (max-width: $responsibilityBreakpoint) {
+@media(max-width: $responsibilityBreakpoint) {
+	.heroFoxy {
+		animation-duration: 4s;
+	}
+
 	.heroContent {
 		padding-inline: 2rem;
 		padding-block: 6rem;
@@ -183,7 +205,7 @@
 	}
 }
 
-@media (max-width: $responsibilityBreakpoint) and (orientation: portrait) {
+@media(max-width: $responsibilityBreakpoint) and (orientation: portrait) {
 	.actions {
 		flex-direction: column;
 		gap: .5rem;

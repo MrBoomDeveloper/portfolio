@@ -73,6 +73,11 @@
 	opacity: .9;
 	line-height: 1.75;
 	font-family: $description-font;
+	color: $description-color;
+
+	a:hover {
+		text-decoration: underline;
+	}
 }
 
 @include mobile {

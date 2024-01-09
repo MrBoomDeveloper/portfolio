@@ -2,7 +2,7 @@ import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
-import { Tag, getTagName } from "@src/data/marks";
+import { skills, Skill } from "@src/data/marks";
 import Separator from "@components/base/separator";
 import clsx from "clsx";
 
@@ -41,7 +41,7 @@ export interface ProjectProps {
 	banner?: string,
 	invert?: boolean,
 	link?: string,
-	tags?: Tag[]
+	tags?: Skill[]
 }
 
 function Project({title, description, banner, invert, link, tags}: ProjectProps) {
@@ -63,7 +63,7 @@ function Project({title, description, banner, invert, link, tags}: ProjectProps)
 					{tags.map(tag => {
 						return (
 							<div key={tag}>
-								<span>{getTagName(tag)}</span>
+								<span>{skills[tag].label}</span>
 							</div>
 						);
 					})}
