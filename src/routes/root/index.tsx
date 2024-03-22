@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Header, Footer } from "@components/layout";
 import styles from "./styles.module.scss";
 import Navigation from "@components/layout/navigation";
 import ButtonExpand from "@components/base/button-expand";
+import Header from "@components/layout/header";
+import Footer from "@components/layout/footer";
 
 interface RootArguments {
 	children?: any

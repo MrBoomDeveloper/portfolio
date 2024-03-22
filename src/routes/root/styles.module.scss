@@ -45,6 +45,6 @@ img {
 
 @media(min-width: $responsibilityBreakpoint) {
 	.burger {
-		display: none;
+		display: none !important;
 	}
 }

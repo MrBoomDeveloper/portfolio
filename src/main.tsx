@@ -1,10 +1,16 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import { HomePage, PrivacyPage, TermsPage, ErrorPage, ProjectPage, Root } from "@routes";
 import translation from "@data/translation.json";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import AweryPage from "@routes/project/awery";
+import Root from "@routes/root";
+import ErrorPage from "@routes/error";
+import HomePage from "@routes/home";
+import PrivacyPage from "@routes/policy/privacy";
+import TermsPage from "@routes/policy/terms";
+import AweryAppLoginPage from "@routes/project/awery/app-login";
 
 i18n.use(initReactI18next).init({
 	resources: translation,
@@ -20,7 +26,8 @@ const router = createHashRouter([
 		{ path: "/", element: <HomePage /> },
 		{ path: "privacy", element: <PrivacyPage /> },
 		{ path: "terms", element: <TermsPage /> },
-		{ path: "project/:projectId", element: <ProjectPage /> }
+		{ path: "awery", element: <AweryPage /> },
+		{ path: "awery/app-login/:ext", element: <AweryAppLoginPage /> },
 	] }
 ]);
 

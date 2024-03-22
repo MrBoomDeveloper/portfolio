@@ -16,15 +16,20 @@ function Projects() {
 				<Separator style={{alignSelf: "center"}} />
 			</div>
 
+			<Project title="Awery" banner="https://raw.githubusercontent.com/MrBoomDeveloper/Awery/master/docs/screenshot2.jpg"
+				tags={["java", "android"]}
+				description="projects.awery.description"
+				link="https://github.com/MrBoomDeveloper/Awery" />
+
 			<Project title="Binacty Engine" banner="/banner/binacty.jpg"
-				tags={["rn", "libgdx", "android"]}
+				tags={["rn", "libgdx", "android"]} invert
 				description="projects.binacty.description"
 				link="https://gamejolt.com/games/actionplatformer/670228" />
 
-			<Project title="Scrollix Browser" banner="/banner/scrollix.jpg" invert
+			{/* <Project title="Scrollix Browser" banner="/banner/scrollix.jpg"
 				tags={["android", "java"]}
 				description="The most Customizable mobile Web Browser!"
-				link="https://github.com/MrBoomDeveloper/Scrollix" />
+				link="https://github.com/MrBoomDeveloper/Scrollix" /> */}
 
 			{/* <Project title="Skayrix"
 				tags={["libgdx", "android", "java"]} /> */}
