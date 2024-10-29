@@ -1,49 +1,127 @@
-@import "@components/variables.scss";
+@use "@components/variables.scss" as vars;
 
 .container {
-	background-color: #f05bed;
-	padding: .8rem 1.4rem;
+	padding-block: .7rem;
+	padding-right: 1.4rem;
+	padding-left: 1.4rem;
 	border-radius: 5px;
 	display: flex;
 	justify-content: center;
-	transition: .15s;
-	
-	&:is(:active, :hover):not(.disabled) {
-		opacity: .5;
-		scale: .975;
+	transition: .15s ease-out;
+
+	&:has(.icon) {
+		padding-left: 1rem;
 	}
 
 	&.disabled {
-		background-color: #bd5dbb;
 		opacity: .75;
 	}
 }
 
 .content {
 	display: inline-flex;
-	gap: 1.35rem;
+	gap: 1.5rem;
 	align-items: center;
 	justify-content: center;
 }
 
 .label {
-	color: black;
-	font-size: 1.1em;
-	font-family: $button-font;
+	font-size: 1em;
+	font-family: vars.$button-font;
 	font-weight: 500;
 }
 
 .icon {
-	height: 1.8rem;
+	height: 1.65rem;
 	aspect-ratio: 1;
 	vertical-align: middle;
 	object-fit: contain;
 	margin-left: -.6rem;
 	margin-right: -1rem;
-	margin-block: -99rem;
+	margin-top: -.05rem;
 }
 
-@include mobile {
+.typeSolid {
+	background-color: #f05bed;
+	position: relative;
+	overflow: hidden;
+
+	&.disabled {
+		background-color: #bd5dbb;
+		opacity: .75;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at center, #351234, #00000000 20%);
+		opacity: 0;
+		scale: 0;
+		transition: scale .75s ease-out .1s, opacity .3s ease-in;
+	}
+
+	.label {
+		color: black;
+	}
+
+	&:is(:active, :hover):not(.disabled) {
+		opacity: .8;
+		scale: .993;
+		cursor: pointer;
+
+		&::after {
+			scale: 15;
+			opacity: .35;
+			transition: scale .75s ease-out, opacity .2s ease-out;
+		}
+	}
+}
+
+.typeOutlined {
+	border: #f05bed solid 2px;
+	position: relative;
+	overflow: hidden;
+	transition: .3s;
+
+	.label {
+		color: #f57ef3;
+		text-shadow: #be4dbd5d 0 0 5px;
+		transition: .3s ease-out;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		background: radial-gradient(circle at center, #551c54, #00000000 50%);
+		opacity: 0;
+		scale: 0;
+		transition: scale .75s ease-out .1s, opacity .3s ease-in;
+	}
+
+	&:is(:active, :hover):not(.disabled) {
+		border: #ec7eeb solid 2px;
+		scale: .99;
+		cursor: pointer;
+
+		&::before {
+			scale: 5;
+			opacity: .4;
+			transition: scale .3s ease-out, opacity .1s ease-out;
+		}
+
+		.label {
+			color: white;
+			text-shadow: rgba(255, 255, 255, 0.137) 0 0 5px;
+		}
+	}
+}
+
+@include vars.mobile {
 	.container {
 		padding-block: .85rem;
 	}

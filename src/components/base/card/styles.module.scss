@@ -1,9 +1,9 @@
-@import "@components/variables";
+@use "@components/variables" as vars;
 
 .container {
 	border-radius: 10px;
 	padding: .5rem;
-	background-color: $surfaceActive;
+	background-color: vars.$surfaceActive;
 	display: flex;
 	align-items: center;
 	gap: .8rem;

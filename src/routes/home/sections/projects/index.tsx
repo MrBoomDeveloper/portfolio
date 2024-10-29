@@ -16,8 +16,8 @@ function Projects() {
 				<Separator style={{alignSelf: "center"}} />
 			</div>
 
-			<Project title="Awery" banner="https://raw.githubusercontent.com/MrBoomDeveloper/Awery/master/docs/screenshot2.jpg"
-				tags={["java", "android"]}
+			<Project title="Awery" banner="https://raw.githubusercontent.com/MrBoomDeveloper/Awery/master/docs/screenshot1.jpg"
+				tags={["kotlin", "android"]}
 				description="projects.awery.description"
 				link="https://github.com/MrBoomDeveloper/Awery" />
 

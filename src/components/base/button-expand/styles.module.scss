@@ -1,3 +1,5 @@
+@use "@components/variables" as vars;
+
 .line {
 	display: block;
 	background-color: white;
@@ -13,11 +15,14 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	transition: .1s;
+	transition: .15s;
 	
-	&:active {
-		scale: .95;
-		opacity: .8;
+	&:active, &:hover {
+		cursor: pointer;
+
+		.line {
+			background-color: vars.$hoverOnBackround;
+		}
 	}
 	
 	&Active {

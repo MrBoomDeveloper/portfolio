@@ -1,4 +1,4 @@
-@import "@components/variables";
+@use "@components/variables" as vars;
 
 .holder {
 	display: flex;
@@ -55,7 +55,7 @@
 }
 
 .input {
-	font-family: $description-font;
+	font-family: vars.$description-font;
 	color: white;
 	background-color: transparent;
 	border: none;
@@ -82,7 +82,7 @@
 	}
 }
 
-@include mobile {
+@include vars.mobile {
 	.input {
 		padding-block: .2rem;
 		padding-inline: .2rem;

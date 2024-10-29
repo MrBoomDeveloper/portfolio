@@ -4,15 +4,15 @@
 	font-family: $subtitle-font;
 	font-weight: 500;
 	font-size: 1.3em;
-	color: #DA30FF;
-	text-shadow: #DA30FF 0 0 1px;
+	color: #db39ff;
+	text-shadow: #d930ff91 0 0 5px;
 }
 
 .title {
 	font-size: 3em;
 	font-family: $title-font;
 	font-weight: 700;
-	text-shadow: rgba(200, 200, 200, .5) 0 0 2px;
+	text-shadow: #c8c8c877 0 0 3px;
 }
 
 .description {
@@ -33,7 +33,7 @@
 	overflow: hidden;
 
 	&Foxy {
-		$foxyRunAnimationMultiplier: 3;
+		$foxyRunAnimationMultiplier: 12;
 		$foxyHeight: 250px;
 
 		position: absolute;
@@ -41,7 +41,7 @@
 		height: $foxyHeight;
 		left: calc(50% - ($foxyHeight /2));
 		transition: .5s;
-		animation: foxyRunningAnimation 4s * $foxyRunAnimationMultiplier infinite ease-in-out;
+		animation: foxyRunningAnimation 2s * $foxyRunAnimationMultiplier infinite ease-in-out;
 
 		&.foxyCaught {
 			filter: 
@@ -174,14 +174,11 @@
 
 .actions {
 	display: flex;
-	gap: .8rem;
+	gap: 1rem;
 
-	> .mainAction {
-		background-color: #e35cf0;
-	}
-
-	> .secondaryAction {
-		background-color: rgb(216, 94, 247);
+	.heroAction {
+		padding-inline: 2.2rem;
+		font-size: 1.05em;
 	}
 }
 
@@ -202,6 +199,21 @@
 		padding-inline: 2rem;
 		padding-block: 6rem;
 		min-height: 75vh;
+	}
+}
+
+@media(max-width: 350px) {
+	.heroContent {
+		font-size: .8em;
+
+		.title {
+			font-size: 2.8em;
+			margin-block: -.2rem;
+		}
+
+		.description {
+			margin-bottom: .5rem;
+		}
 	}
 }
 

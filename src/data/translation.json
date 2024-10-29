@@ -11,6 +11,7 @@
 			},
 
 			"home": {
+				"highlight": " Современный Разработчик",
 				"hi": "Привет, я MrBoomDev!",
 				"description": "Мне нравиться создавать стильные и эпичные игры, сайты и приложения для мобильных устройств.",
 				"see_projects": "Мои Проекты",
@@ -92,6 +93,7 @@
 			},
 
 			"home": {
+				"highlight": "A Modern Developer",
 				"hi": "Hey, I'm MrBoomDev!",
 				"description": "I like to create stylish and epic games, websites and apps for mobile devices.",
 				"see_projects": "See Projects",

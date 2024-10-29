@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Button from "@components/base/button";
+import Button, { ButtonType } from "@components/base/button";
 import Section from "./sections/Section";
 import styles from "./styles.module.scss";
 import { memo, useEffect, useRef, useState } from "react";
@@ -7,6 +7,7 @@ import Projects from "./sections/projects";
 import SkillsSection from "./sections/skills";
 import ContactSection, { ContactSectionRef } from "./sections/contact";
 import AboutMe from "./sections/aboutme";
+import clsx from "clsx";
 
 export default function HomePage() {
 	const projectsSection = useRef<HTMLDivElement>(null);
@@ -30,15 +31,13 @@ export default function HomePage() {
 				<BackgroundAnimation />
 				
 				<div className={styles.heroContent} style={{translate: `0 ${offset / 5}px`, opacity: ((screen.height - (offset * 1.25)) / screen.height)}}>
-					<p className={styles.highlight}>Frontend Developer</p>
+					<p className={styles.highlight}>{t("home.highlight")}</p>
 					<h1 className={styles.title}>{t("home.hi")}</h1>
 					<p className={styles.description}>{t("home.description")}</p>
 					
 					<div className={styles.actions}>
 						<Button text={t("home.see_projects")} 
-							className={styles.mainAction}
-							style={{paddingInline: "2.4rem"}}
-							icon="icon/expand.svg"
+							className={clsx(styles.heroAction, styles.mainAction)}
 							iconStyle={{rotate: "-90deg"}}
 							onPress={() => {
 								const offset = (projectsSection.current?.offsetTop || 0) - 125;
@@ -46,8 +45,8 @@ export default function HomePage() {
 							}} />
 
 						<Button text={t("contact.title")} 
-							style={{paddingInline: "2.4rem"}}
-							className={styles.secondaryAction}
+							type={ButtonType.OUTLINED}
+							className={clsx(styles.heroAction, styles.secondaryAction)}
 							onPress={() => {
 								const offset = (formSection.current?.offsetTop || 0) - 150;
 								window.scrollTo({ top: offset, behavior: "smooth" })

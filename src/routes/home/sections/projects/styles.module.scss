@@ -17,7 +17,7 @@
 }
 
 .projectBanner {
-	border-radius: 5px;
+	border-radius: 8px;
 	overflow: hidden;
 	aspect-ratio: 16 / 9;
 
@@ -93,7 +93,7 @@
 		display: block;
 		width: 100px;
 		font-size: .95em;
-		color: $description-color;
+		color: #f1e6ee;
 		width: 100%;
 	}
 }
@@ -101,6 +101,7 @@
 .projectTags {
 	margin-block: -.2rem;
 	display: flex;
+	flex-wrap: wrap;
 	gap: .5rem;
 
 	& > div {
@@ -108,7 +109,7 @@
 
 		& > span {
 			font-size: .9em;
-			color: rgb(241, 202, 241);
+			color: #f0b1f0;
 			font-family: $description-font;
 		}
 	}
@@ -124,23 +125,6 @@
 			scale: 1.04;
 			opacity: .8;
 		}
-
-		.projectHeader > span {
-			translate: -.75rem 0;
-			background-color: transparent;
-
-			&::before {
-				translate: 1.5rem;
-				rotate: 35deg;
-				top: -.25rem;
-			}
-
-			&::after {
-				translate: 1.5rem;
-				rotate: -35deg;
-				bottom: -.25rem;
-			}
-		}
 	}
 }
 
@@ -153,6 +137,31 @@
 		& > .projectInfo {
 			width: 50%;
 			flex-grow: 1;
+			padding-top: .5rem;
+		}
+
+		&:hover, &:active {
+			& > .projectBanner > img {
+				scale: 1.04;
+				opacity: .8;
+			}
+	
+			.projectHeader > span {
+				translate: -.75rem 0;
+				background-color: transparent;
+	
+				&::before {
+					translate: 1.5rem;
+					rotate: 35deg;
+					top: -.25rem;
+				}
+	
+				&::after {
+					translate: 1.5rem;
+					rotate: -35deg;
+					bottom: -.25rem;
+				}
+			}
 		}
 
 		@media (max-width: ($responsibilityBreakpoint - 100)) {
@@ -198,10 +207,17 @@
 
 	.project {
 		flex-direction: column;
+
+		&:hover, &:active {
+			.projectHeader > span {
+				opacity: .7;
+			}
+		}
 	}
 
 	.projectBanner {
 		width: 100%;
+		border-radius: 8px 8px 0 0;
 	}
 
 	.projectDescription > p {
@@ -213,6 +229,12 @@
 	}
 
 	.projectInfo {
-		padding-inline: .5rem;
+		padding-inline: 1rem;
+		background-color: $surface;
+		border-radius: 0 0 8px 8px;
+	}
+
+	.projectHeader > span {
+		scale: .8;
 	}
 }

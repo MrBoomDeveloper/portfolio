@@ -7,25 +7,28 @@
 	"scripts": {
 		"start": "npm run dev",
 		"dev": "vite",
-		"build": "tsc && vite build",
+		"build": "vite build",
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"clsx": "^2.1.0",
-		"i18next": "^22.4.14",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-i18next": "^12.2.0",
-		"react-router-dom": "^6.10.0",
+		"clsx": "^2.1.1",
+		"i18next": "^22.5.1",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-i18next": "^12.3.1",
 		"react-router-hash-link": "^2.4.3"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.11",
 		"@types/react-router-hash-link": "^2.4.7",
-		"@vitejs/plugin-react": "^3.1.0",
-		"sass": "^1.62.0",
-		"typescript": "^4.9.3",
-		"vite": "^4.2.0"
+		"@vitejs/plugin-react": "^4.3.3",
+		"react-router-dom": "^6.27.0",
+		"sass": "^1.80.4",
+		"sharp": "^0.33.5",
+		"svgo": "^3.3.2",
+		"typescript": "^5.6.3",
+		"vite": "^5.4.10",
+		"vite-plugin-image-optimizer": "^1.1.8"
 	}
 }

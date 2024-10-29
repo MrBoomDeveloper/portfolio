@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { UserConfig, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 const root = resolve(__dirname, "src");
 
@@ -17,7 +18,10 @@ const global: UserConfig = {
 		extensions: [".tsx", ".ts", ".json", ".module.scss"]
 	},
 	
-	plugins: [ react() ]
+	plugins: [
+		react(),
+		ViteImageOptimizer()
+	]
 }
 
 const dev: UserConfig = {
@@ -42,6 +46,6 @@ const prod: UserConfig = {
 	}
 }
 
-export default defineConfig(({ command, mode, ssrBuild }) => {
+export default defineConfig(({ command }) => {
 	return command === "serve" ? dev : prod;
 });

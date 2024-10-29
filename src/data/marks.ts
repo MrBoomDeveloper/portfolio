@@ -1,13 +1,19 @@
 export const skills = {
+	android: {
+		label: "Android",
+		icon: "https://cdn.simpleicons.org/android/45ff7d",
+		hide: false
+	},
+
 	react: {
 		label: "React",
 		icon: "https://cdn.simpleicons.org/react",
 		hide: false
 	},
 
-	ts: {
-		label: "TypeScript",
-		icon: "https://cdn.simpleicons.org/typescript/5b73fc",
+	libgdx: {
+		label: "LibGDX",
+		icon: "/icon/skill/libgdx.png",
 		hide: false
 	},
 
@@ -23,15 +29,15 @@ export const skills = {
 		hide: false
 	},
 
-	android: {
-		label: "Android",
-		icon: "https://cdn.simpleicons.org/android/45ff7d",
+	ts: {
+		label: "TypeScript",
+		icon: "https://cdn.simpleicons.org/typescript/5b73fc",
 		hide: false
 	},
 
-	mysql: {
-		label: "MySQL",
-		icon: "https://cdn.simpleicons.org/mysql/6eb6ff",
+	kotlin: {
+		label: "Kotlin",
+		icon: "https://cdn.simpleicons.org/kotlin",
 		hide: false
 	},
 
@@ -41,22 +47,16 @@ export const skills = {
 		hide: false
 	},
 
+	mysql: {
+		label: "MySQL",
+		icon: "https://cdn.simpleicons.org/mysql/6eb6ff",
+		hide: false
+	},
+
 	rn: {
 		label: "React Native",
 		icon: "https://cdn.simpleicons.org/react",
 		hide: true
-	},
-
-	java: {
-		label: "Java",
-		icon: "/icon/skill/java.png",
-		hide: false
-	},
-
-	libgdx: {
-		label: "LibGDX",
-		icon: "/icon/skill/libgdx.png",
-		hide: false
 	}
 } as const;
 

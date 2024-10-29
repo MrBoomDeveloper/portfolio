@@ -1,6 +1,11 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useMemo } from "react";
 import styles from "./styles.module.scss"; 
 import clsx from "clsx";
+
+export enum ButtonType {
+	SOLID,
+	OUTLINED
+}
 
 export default function Button({
 	text,
@@ -9,7 +14,8 @@ export default function Button({
 	icon,
 	iconStyle,
 	className,
-	enabled = true
+	enabled = true,
+	type = ButtonType.SOLID
 }: {
 	text: string,
 	style?: CSSProperties,
@@ -17,10 +23,18 @@ export default function Button({
 	className?: string,
 	iconStyle?: CSSProperties,
 	onPress?: () => void,
-	enabled?: boolean
+	enabled?: boolean,
+	type?: ButtonType
 }) {
+	const typeClass = useMemo(() => {
+		switch(type) {
+			case ButtonType.SOLID: return styles.typeSolid;
+			case ButtonType.OUTLINED: return styles.typeOutlined;
+		}
+	}, [type]);
+
 	return (
-		<div className={clsx(styles.container, className, enabled ? styles.enabled : styles.disabled)}
+		<div className={clsx(styles.container, typeClass, className, enabled ? styles.enabled : styles.disabled)}
 			style={style} 
 			onClick={() => {
 				if(!enabled) return;

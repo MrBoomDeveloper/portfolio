@@ -26,9 +26,7 @@ export default function Root({children}: RootArguments) {
 			</Header>
 			
 			<Outlet />
-
 			{children}
-
 			<Footer />
 		</div>
 	);
