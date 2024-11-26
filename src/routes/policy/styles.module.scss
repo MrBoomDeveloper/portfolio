@@ -1,4 +1,4 @@
-@import "@components/variables";
+@use "@components/variables" as vars;
 
 .screen {
 	padding: 2rem;
@@ -9,7 +9,7 @@
 }
 
 .content {
-	max-width: $responsibilityBreakpoint;
+	max-width: vars.$responsibilityBreakpoint;
 	width: 100%;
 	padding-block: 5rem 1rem;
 	display: flex;

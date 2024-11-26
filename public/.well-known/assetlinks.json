@@ -1,15 +1,28 @@
-[{
-	"relation": ["delegate_permission/common.handle_all_urls"],
-	"target": {
-		"namespace": "android_app",
-		"package_name": "com.mrboomdev.awery",
-		"sha256_cert_fingerprints": ["1A:21:3C:E6:CB:DF:5E:90:CB:FD:C2:CC:71:3C:5E:73:82:2C:C1:3D:F1:61:1C:04:79:8F:FC:E4:7B:8D:FA:FB"]
+[
+	{
+		"relation": ["delegate_permission/common.handle_all_urls"],
+		"target": {
+			"namespace": "android_app",
+			"package_name": "com.mrboomdev.awery",
+			"sha256_cert_fingerprints": ["1A:21:3C:E6:CB:DF:5E:90:CB:FD:C2:CC:71:3C:5E:73:82:2C:C1:3D:F1:61:1C:04:79:8F:FC:E4:7B:8D:FA:FB"]
+		}
+	}, 
+	
+	{
+		"relation": ["delegate_permission/common.handle_all_urls"],
+		"target": {
+			"namespace": "android_app",
+			"package_name": "com.mrboomdev.awery.beta",
+			"sha256_cert_fingerprints": ["1A:21:3C:E6:CB:DF:5E:90:CB:FD:C2:CC:71:3C:5E:73:82:2C:C1:3D:F1:61:1C:04:79:8F:FC:E4:7B:8D:FA:FB"]
+		}
+	},
+
+	{
+		"relation": ["delegate_permission/common.handle_all_urls"],
+		"target": {
+			"namespace": "android_app",
+			"package_name": "com.mrboomdev.awery.alpha",
+			"sha256_cert_fingerprints": ["1A:21:3C:E6:CB:DF:5E:90:CB:FD:C2:CC:71:3C:5E:73:82:2C:C1:3D:F1:61:1C:04:79:8F:FC:E4:7B:8D:FA:FB"]
+		}
 	}
-}, {
-	"relation": ["delegate_permission/common.handle_all_urls"],
-	"target": {
-		"namespace": "android_app",
-		"package_name": "com.mrboomdev.awery.beta",
-		"sha256_cert_fingerprints": ["1A:21:3C:E6:CB:DF:5E:90:CB:FD:C2:CC:71:3C:5E:73:82:2C:C1:3D:F1:61:1C:04:79:8F:FC:E4:7B:8D:FA:FB"]
-	}
-}]
+]

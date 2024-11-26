@@ -1,65 +1,73 @@
-export const skills = {
+import { siAndroid, siExpress, siJetpackcompose, siKotlin, siMysql, siReact, siSass, siTypescript, siWebpack } from "simple-icons";
+
+interface Skill {
+	name: string,
+	scale?: number,
+	svg?: string,
+	url?: string,
+	color?: string,
+	hide?: boolean
+}
+
+export type SkillName = keyof typeof skills
+
+export const skills: Record<string, Skill> = {
 	android: {
-		label: "Android",
-		icon: "https://cdn.simpleicons.org/android/45ff7d",
-		hide: false
+		name: "Android",
+		color: "45ff7d",
+		svg: siAndroid.path
 	},
 
 	react: {
-		label: "React",
-		icon: "https://cdn.simpleicons.org/react",
-		hide: false
+		name: "React",
+		color: siReact.hex,
+		svg: siReact.path
 	},
 
-	libgdx: {
-		label: "LibGDX",
-		icon: "/icon/skill/libgdx.png",
-		hide: false
-	},
-
-	scss: {
-		label: "Sass",
-		icon: "https://cdn.simpleicons.org/sass",
-		hide: false
-	},
-
-	webpack: {
-		label: "Webpack",
-		icon: "https://cdn.simpleicons.org/webpack/6eb6ff",
-		hide: false
+	compose: {
+		name: "Compose",
+		color: siJetpackcompose.hex,
+		svg: siJetpackcompose.path
 	},
 
 	ts: {
-		label: "TypeScript",
-		icon: "https://cdn.simpleicons.org/typescript/5b73fc",
-		hide: false
+		name: "TypeScript",
+		color: "5b73fc",
+		svg: siTypescript.path,
+		scale: .95
 	},
 
 	kotlin: {
-		label: "Kotlin",
-		icon: "https://cdn.simpleicons.org/kotlin",
-		hide: false
+		name: "Kotlin",
+		color: siKotlin.hex,
+		svg: siKotlin.path,
+		scale: .95
+	},
+
+	scss: {
+		name: "Sass",
+		color: "e175ff",
+		svg: siSass.path
+	},
+
+	libgdx: {
+		name: "LibGDX",
+		url: "/icon/skill/libgdx.png"
 	},
 
 	express: {
-		label: "Express",
-		icon: "https://cdn.simpleicons.org/express/ffffff",
-		hide: false
+		name: "Express",
+		color: "ffffff",
+		svg: siExpress.path,
+		scale: 1.05
 	},
 
 	mysql: {
-		label: "MySQL",
-		icon: "https://cdn.simpleicons.org/mysql/6eb6ff",
-		hide: false
-	},
-
-	rn: {
-		label: "React Native",
-		icon: "https://cdn.simpleicons.org/react",
-		hide: true
+		name: "MySQL",
+		color: "818fd4",
+		svg: siMysql.path,
+		scale: 1.2
 	}
-} as const;
-
-export type Skill = keyof typeof skills;
+};
 
 export const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -3,16 +3,17 @@ import { UserConfig, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
-const root = resolve(__dirname, "src");
+const src = resolve(__dirname, "src");
 
 const global: UserConfig = {
 	resolve: {
 		alias: {
-			"@src": root,
-			"@assets": resolve(root, "assets"),
-			"@components": resolve(root, "components"),
-			"@routes": resolve(root, "routes"),
-			"@data": resolve(root, "data")
+			"@root": __dirname,
+			"@src": src,
+			"@assets": resolve(src, "assets"),
+			"@components": resolve(src, "components"),
+			"@routes": resolve(src, "routes"),
+			"@data": resolve(src, "data")
 		},
 		
 		extensions: [".tsx", ".ts", ".json", ".module.scss"]

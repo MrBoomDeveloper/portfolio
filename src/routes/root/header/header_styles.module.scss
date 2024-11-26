@@ -1,0 +1,45 @@
+@use "@components/variables" as vars;
+
+.logo {
+	color: #F057FF;
+	text-shadow: 0 0 1px #F057FF;
+	font-family: vars.$button-font;
+	font-weight: 500;
+	text-shadow: #F057FF 0 0 2px;
+	transition: .2s;
+	
+	&:hover {
+		opacity: .75;
+		text-shadow: 0 0;
+	}
+}
+
+.container {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	height: 5rem;
+	justify-content: center;
+	padding-inline: 2rem;
+	display: flex;
+	width: 100%;
+	transition: background-color .3s, top .25s;
+	
+	&.active {
+		background-color: rgba(11, 5, 21, .8);
+		backdrop-filter: blur(1px);
+	}
+
+	&.hidden {
+		top: -5rem;
+	}
+	
+	.content {
+		flex: 1;
+		height: 100%;
+		max-width: vars.$responsibilityBreakpoint;
+		align-items: center;
+		display: flex;
+	}
+}

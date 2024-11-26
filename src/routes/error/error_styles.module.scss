@@ -1,0 +1,17 @@
+@use "@components/variables" as vars;
+
+.container {
+	display: flex;
+	justify-content: center;
+	padding-inline: 2rem;
+	height: 75vh;
+}
+
+.content {
+	max-width: vars.$responsibilityBreakpoint;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.2rem;
+}

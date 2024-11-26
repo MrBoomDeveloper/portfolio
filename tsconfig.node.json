@@ -6,11 +6,12 @@
 		"allowSyntheticDefaultImports": true,
 
 		"paths": {
+			"@root/*": ["./*"],
+			"@src/*": ["./src/*"],
 			"@components/*": ["./src/components/*"],
 			"@assets/*": ["./src/assets/*"],
 			"@routes/*": ["./src/routes/*"],
 			"@data/*": ["./src/data/*"],
-      		"@src/*": ["./src/*"],
 			"@public/*": ["./public/*"]
 		}
 	},

@@ -1,0 +1,49 @@
+@use "@components/variables" as vars;
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: .4rem;
+}
+
+.infoTitle {
+	font-family: vars.$button-font;
+}
+
+.infoDescription {
+	font-family: vars.$description-font;
+	color: vars.$description-color;
+}
+
+.banner > img {
+	width: 100%;
+	object-fit: contain;
+}
+
+@include vars.mobile {
+	.section {
+		padding-inline: vars.$mobilePadding;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1.25rem;
+	}
+}
+
+@include vars.desktop {
+	.section {
+		display: flex;
+		gap: 2rem;
+
+		&.invert {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.info {
+		flex-grow: 1;
+	}
+
+	.banner {
+		width: min(50%, 20rem);
+	}
+}
